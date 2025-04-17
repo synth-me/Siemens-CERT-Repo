@@ -1,0 +1,362 @@
+{
+  "document": {
+    "title": "SSA-977428: Vulnerabilities inSCALANCE M875",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-977428",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2018-06-12T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2018-06-12T00:00:00Z",
+      "current_release_date": "2018-06-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Multiple vulnerabilities have been identiﬁed in the web interface of SCALANCE M875. The web interface\nof SCALANCE M875 could allow Cross-Site Request Forgery (CSRF), stored Cross-Site Scripting (XSS),\nor command injection attacks if an attacker is authenticated or tricks a legitimate authenticated user into\naccessing a malicious link.\nSiemens recommends customers to upgrade their hardware, and provides mitigations until hardware\nupgrades can be applied."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Restrict access to the web-based management interface to the internal or VPN network.\n•Use the built-in ﬁrewall to further restrict access to the web interface to trusted IP addresses if\npossible.\n• Protect administrative user account with strong passwords.\n•Do not browse other websites and do not click on external links while being authenticated to the\nadministrative web interface."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity\nSSA-977428 © Siemens AG 2018 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories\nSSA-977428 © Siemens AG 2018 Page 3 of 4\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-977428.pdf",
+        "summary": "SSA-977428: Vulnerabilities inSCALANCE M875 - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Eugenie Potseluevskaya from Kaspersky Lab for coordinated disclosure",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SCALANCE M875",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsUpgrade hardware to SCALANCE M876-4 or",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SCALANCE M875"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2018-4859",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An authenticated remote attacker with access to the web interface (443/tcp), could execute arbitrary\noperating system commands.\nSuccessful exploitation requires that the attacker has network access to the web interface. The\nattacker must be authenticated as administrative user to exploit the security vulnerability.\nThe vulnerability could allow an attacker to execute arbitrary code on the device.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 7.2\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2018-4859",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "RUGGEDCOM RM1224, or follow recommenda-\ntions from Section Workarounds and Mitigations.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2018-4860",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An authenticated remote attacker with access to the web interface (443/tcp), could execute arbitrary\noperating system commands.\nSuccessful exploitation requires that the attacker has network access to the web interface. The\nattacker must be authenticated as administrative user to exploit the security vulnerability.\nThe vulnerability could allow an attacker to execute arbitrary code on the device.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 7.2\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2018-4860",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "RUGGEDCOM RM1224, or follow recommenda-\ntions from Section Workarounds and Mitigations.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2018-4861",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An authenticated remote attacker with access to the web interface (443/tcp), could potentially read\nand download arbitrary ﬁles from the device’s ﬁle system.\nSuccessful exploitation requires that the attacker has network access to the web interface. The\nattacker must be authenticated as administrative user to exploit the security vulnerability.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 4.9\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C\nSSA-977428 © Siemens AG 2018 Page 2 of 4\nSiemens Security Advisory by Siemens ProductCERT"
+        }
+      ],
+      "cve": "CVE-2018-4861",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "RUGGEDCOM RM1224, or follow recommenda-\ntions from Section Workarounds and Mitigations.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2018-11447",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The web interface on port 443/tcp could allow a Cross-Site Request Forgery (CSRF) attack if an\nunsuspecting user is tricked into accessing a malicious link.\nSuccessful exploitation requires user interaction by an legitimate user, who must be authenticated to\nthe web interface as administrative user. A successful attack could allow an attacker to interact with\nthe web interface as an administrative user. This could allow the attacker to read or modify the device\nconﬁguration, or to exploit other vulnerabilities that require authentication as administrative user.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 7.5\nCVSS Vector CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2018-11447",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "RUGGEDCOM RM1224, or follow recommenda-\ntions from Section Workarounds and Mitigations.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2018-11448",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The web interface on port 443/tcp could allow a stored Cross-Site Scripting (XSS) attack if an\nunsuspecting user is tricked into accessing a malicious link.\nSuccessful exploitation requires that the attacker has access to the web interface of an affected\ndevice. The attacker must be authenticated as administrative user on the web interface. Afterwards, a\nlegitimate user must access the web interface.\nA successful attack could allow an attacker to execute malicious code in the browser of a legitimate\nuser.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 4.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2018-11448",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "RUGGEDCOM RM1224, or follow recommenda-\ntions from Section Workarounds and Mitigations.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2018-11449",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with access to the local ﬁle system might obtain passwords for administratrive users.\nSuccessful exploitation requires read access to ﬁles on the local ﬁle system. A successful attack could\nallow an attacker to obtain administrative passwords.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 4.4\nCVSS Vector CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2018-11449",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "RUGGEDCOM RM1224, or follow recommenda-\ntions from Section Workarounds and Mitigations.",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}

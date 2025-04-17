@@ -1,0 +1,143 @@
+{
+  "document": {
+    "title": "SSA-865156: Denial-of-Service Vulnerability inSINAMICS PERFECT",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-865156",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2019-05-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2019-05-14T00:00:00Z",
+      "current_release_date": "2019-05-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SINAMICS PERFECT HARMONY GH180 Drives NXG I and NXG II control contains a denial-of-service\nvulnerability within the Parameter Read/Write over Fieldbus network functionality. An attacker with access\nto the ﬁeld bus network could cause a Denial-of-Service condition by sending specially crafted packets.\nBy default, Parameter Read/Write over Fieldbus network is disabled, and this functionality must be\nspeciﬁcally enabled to expose this vulnerability."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Disable the Fieldbus Parameter Read/Write functionality\n• Apply cell protection concept and implement Defense-in-Depth"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity\nSSA-865156 © Siemens AG 2019 Page 1 of 2\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-865156.pdf",
+        "summary": "SSA-865156: Denial-of-Service Vulnerability inSINAMICS PERFECT - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "6SR4. . . -",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All Versions with option G21, G22, G23, G26,",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "6SR4. . . -"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-6574",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An improperly conﬁgured Parameter Read/Write execution via Field bus network may cause the\ncontroller to restart.\nThe vulnerability could be exploited by an attacker with network access to the device. Successful\nexploitation requires no privileges and no user interaction. An attacker could use the vulnerability to\ncompromise the availability of the affected system.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 7.5\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:W/RC:C"
+        }
+      ],
+      "cve": "CVE-2019-6574",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "G28, G31, G32, G38, G43 or G46Upgrade to NXGpro control\nPlease contact customer service to obtain and\ninstall the upgrade.\nSINAMICS PERFECT HARMONY GH180 with\nNXG II control, MLFBs: 6SR2. . . -, 6SR3. . . -,\n6SR4. . . -:\nAll Versions with option G21, G22, G23, G26,\nG28, G31, G32, G38, G43 or G46Upgrade to NXGpro control\nPlease contact customer service to obtain and\ninstall the upgrade.",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}

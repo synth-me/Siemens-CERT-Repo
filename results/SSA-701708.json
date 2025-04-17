@@ -1,0 +1,152 @@
+{
+  "document": {
+    "title": "SSA-701708: Local Privilege Escalation inIndustrial Products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-701708",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.9",
+          "date": "2016-11-07T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2016-11-07T00:00:00Z",
+      "current_release_date": "2019-10-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "In non-default conﬁgurations several industrial products are affected by a vulnerability that could allow\nlocal Microsoft Windows operating system users to escalate their privileges.\nSiemens provides updates for several products and a temporary ﬁx for the remaining affected products.\nSiemens is working on new versions for the remaining affected products and will update this advisory\nwhen new information becomes available."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•Install the affected products under their default path (\"C:\\Program Files\\*\" or the localized equivalent)\nand verify that ﬁle system access permissions for drive C:\\\\ were not modiﬁed.\n•Additionally, attackers must have local operating system access to the affected products. Siemens\nrecommends applying Defense-in-Depth (Download: https://www.siemens.com/cert/operational-\nguidelines-industrial-security) and restricting ﬁle system access rights."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories\nSSA-701708 © Siemens 2019 Page 4 of 5\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-701708.pdf",
+        "summary": "SSA-701708: Local Privilege Escalation inIndustrial Products - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "WATERSURE and KIANDRA IT for coordinated disclosure",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Primary Setup Tool (PST)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V4.2 HF1Update to V4.2 HF1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Primary Setup Tool (PST)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2016-7165",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Unquoted service paths could allow local Microsoft Windows operating system users to escalate their\nprivileges if the affected products are not installed under their default path (“C:\\Program Files\\*\" or the\nlocalized equivalent).\nCVSS v3.0 Base Score 6.4\nCVSS Vector CVSS:3.0/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2016-7165",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/19440762\nSIMATIC IT Production Suite:\nAll versions < V7.0 SP1 HFX 2Update to V7.0 SP1 HFX 2\nhttps://mes-simaticit.siemens.com/tss/html/hfc.\nhtml\nSIMATIC NET PC-Software:\nAll versions < V14Upgrade to V14\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109741996\nSIMATIC PCS 7 V7.1 and earlier versions:\nAll versionsApply temporary ﬁx\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109740929\nSIMATIC PCS 7 V8.0:\nAll versionsApply temporary ﬁx\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109740929\nSIMATIC PCS 7 V8.1:\nAll versionsApply temporary ﬁx and apply SIMATIC WinCC\nV7.3 Upd 11\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109740929,\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109742642\nSIMATIC PCS 7 V8.2:\nAll versions < V8.2 SP1Update to V8.2 SP1\nTo obtain SIMATIC PCS 7 V8.2 SP1 contact your\nlocal support.\nSSA-701708 © Siemens 2019 Page 1 of 5\nSiemens Security Advisory by Siemens ProductCERT\nSIMATIC STEP 7 (TIA Portal) V13:\nAll versions < V13 SP2Update to V13 SP2\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109745155\nSIMATIC STEP 7 V5.X:\nAll versions < V5.5 SP4 HF11Update to V5.5 SP4 HF11\nhttps://support.industry.siemens.com/cs/de/en/\nview/109737984\nSIMATIC WinAC RTX (F) 2010 SP2:\nAll versions < SIMATIC WinAC RTX 2010 SP3Update to SIMATIC WinAC RTX 2010 SP3 and\napply BIOS and Microsoft Windows updates\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109765109\nSIMATIC WinCC (TIA Portal) Basic, Comfort, Ad-\nvanced:\nAll versions < V14Upgrade to V14\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109739719\nSIMATIC WinCC (TIA Portal) Professional V13:\nAll versions < V13 SP2Update to V13 SP2\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109745155\nSIMATIC WinCC (TIA Portal) Professional V14:\nAll versions < V14 SP1Update to V14 SP1\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109746074\nSIMATIC WinCC Runtime Professional V13:\nAll versions < V13 SP2Update to V13 SP2\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109746075\nSIMATIC WinCC Runtime Professional V14:\nAll versions < V14 SP1Update to V14 SP1\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109746276\nSIMATIC WinCC V7.0 SP2 and earlier versions:\nAll versions < V7.0 SP2 Upd 12Update to V7.0 SP2 Upd 12\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109741519\nSIMATIC WinCC V7.0 SP3:\nAll versions < V7.0 SP3 Upd 8Update to V7.0 SP3 Upd 8\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109741127\nSIMATIC WinCC V7.2:\nAll versions < V7.2 Upd 14Update to V7.2 Upd 14\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109745028\nSIMATIC WinCC V7.3:\nAll versions < V7.3 Upd 11Update to V7.3 Upd 11\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109742642\nSIMATIC WinCC V7.4:\nAll versions < V7.4 SP1Update to V7.4 SP1\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109746038\nSIMIT V9.0:\nAll versions < V9.0 SP1Update to V9.0 SP1\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109743963\nSINEMA Remote Connect Client:\nAll versions < V1.0 SP3Update to V1.0 SP3\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109754280\nSSA-701708 © Siemens 2019 Page 2 of 5\nSiemens Security Advisory by Siemens ProductCERT\nSINEMA Server:\nAll versions < V13 SP2Update to V13 SP2\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109741833\nSOFTNET Security Client V5.0:\nAll versionsApply temporary ﬁx\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109740929\nSecurity Conﬁguration Tool (SCT):\nAll versions < V4.3 HF1Update to V4.3 HF1\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109744041\nTeleControl Server Basic:\nAll versions < V3.0 SP2Update to V3.0 SP2\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109483119",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}

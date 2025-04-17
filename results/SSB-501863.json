@@ -1,0 +1,85 @@
+{
+  "document": {
+    "title": "",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.1",
+          "date": "2019-05-16T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2019-05-16T00:00:00Z",
+      "current_release_date": "2019-05-22T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Microsoft released updates for several versions of Microsoft Windows, which ﬁx a vulnerability in the\nRemote Desktop Service. The vulnerability could allow an unauthenticated remote attacker to execute\narbitrary code on the target system if the system exposes the service to the network.\nSeveral Siemens Healthineers products are based on Microsoft Windows, or can be installed on Microsoft\nWindows.\nSome of these Siemens Healthineers products are affected by this vulnerability. Depending on the target\nsystem and intent of the attacker, a successful exploit could result in data corruption and potential harm\nfor patients and/or the environment.\nThis document provides general information and recommendations for customers regarding the vulnera-\nbility.\nDESCRIPTION\nMicrosoft released updates for Windows XP , Windows Server 2003, Windows 7, Windows Server 2008\nand Windows Server 2008 R2 on 2019-05-14. The updates ﬁx a vulnerability that affects the Remote\nDesktop Protocol (RDP) implementation on these operating systems.\nThe vulnerability could allow an unauthenticated remote attacker to execute arbitrary code on the target\nsystem. Depending on the target system and intent of the attacker, this could result in data corruption\nand potential harm for patients and/or the environment.\nThe Remote Desktop Service must be activated, and an attacker must have network access to port\n3389/tcp of affected devices and NLA must de-activated at the same time in order to exploit the vulnera-\nbility.\nThe vulnerability is identiﬁed as CVE-2019-0708.\nMicrosoft has released updates that address the vulnerability and has released additional guidance for\noperators:\n• https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708\n• https://support.microsoft.com/en-us/help/4500705/customer-guidance-for-cve-2019-0708\nAt the time of publication of this bulletin, no exploitation of this security vulnerability has been publicly\nreported. However there is evidence that the security research community is working on an exploit and\nthat such an exploit would eventually have adverse effects.\nGENERAL RECOMMENDATIONS\nFor your general IT environment, please follow the recommendations of Microsoft regarding this vulnera-\nbility.\nFor Siemens Healthineers products, product speciﬁc advisories will be published when necessary.\nSSB-501863 © Siemens AG 2019 Page 1 of 2\nSiemens Security Bulletin by Siemens ProductCERT\nFor products that are End of Support, no updates are planned. Hence Siemens strongly recommends\nclosing the RDP port where possible or disconnecting these devices from the network.\nADDITIONAL RESOURCES\nA description of CVE-2019-0708 by Microsoft can be found here:\nhttps://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708\nThe customer guidance for CVE-2019-0708 by Microsoft (including XP and Server 2003) can be found\nhere:\nhttps://support.microsoft.com/en-us/help/4500705/customer-guidance-for-cve-2019-0708"
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": ""
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/.pdf",
+        "summary": " - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": []
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

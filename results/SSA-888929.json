@@ -1,0 +1,85 @@
+{
+  "document": {
+    "title": "SSA-888929: Missing Integrity Verification in LOGO! Soft Comfort",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-888929",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "",
+          "date": "",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "",
+      "current_release_date": "",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The Update Center of LOGO! Soft Comfort lacks integrity verification on software packages\ndownloaded via an unprotected communication channel. This could allow a remote attacker in\na privileged network position to manipulate a software package during download.\nSiemens provides SHA-256 checksums for all LOGO! Soft Comfort software packages to\nallow verification of legitimacy.\nAFFECTED PRODUCTS\n· LOGO! Soft Comfort: All versions < V8.2\nDESCRIPTION\nLOGO! Soft Comfort is an engineering software to configure and program LOGO! controllers.\nDetailed information about the vulnerability is provided below."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": ""
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-888929.pdf",
+        "summary": "SSA-888929: Missing Integrity Verification in LOGO! Soft Comfort - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": []
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

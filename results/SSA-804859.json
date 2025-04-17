@@ -1,0 +1,85 @@
+{
+  "document": {
+    "title": "SSA-804859: Denial of Service Vulnerability in SIMATIC Logon",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-804859",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "",
+          "date": "",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "",
+      "current_release_date": "",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The latest version of SIMATIC Logon fixes a security vulnerability that could allow attackers to\ncause a denial of service of the SIMATIC Logon Remote Access service under certain\nconditions.\nAFFECTED PRODUCTS\n· SIMATIC Logon: All versions < V1.6\nDESCRIPTION\nThe SIMATIC Logon Remote Access service provides authentication for access control on\nSIMATIC HMI panels. The Remote Access service is an optional component of SIMATIC\nLogon (SL) that is used for central user administration and access control in other SIMATIC\napplications.\nDetailed information about the vulnerability is provided below."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": ""
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-804859.pdf",
+        "summary": "SSA-804859: Denial of Service Vulnerability in SIMATIC Logon - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": []
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

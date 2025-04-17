@@ -1,0 +1,353 @@
+{
+  "document": {
+    "title": "SSA-701903: SMBv1 Vulnerabilities inUltrasound Products from",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-701903",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.3",
+          "date": "2017-05-22T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2017-05-22T00:00:00Z",
+      "current_release_date": "2018-02-22T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Select Ultrasound products from Siemens Healthineers are affected by the Microsoft Windows SMBv1\nvulnerabilities. The exploitability of the vulnerabilities depends on the actual conﬁguration and deployment\nenvironment of each product.\nSiemens Healthineers provides updates for the affected products, and recommends speciﬁc countermea-\nsures until patches can be applied."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•Until patches can be applied by the customer support and for end-of-support products, Siemens\nHealthineers recommends to isolate affected products that are listening on network ports 139/tcp,\n445/tcp or 3389/tcp from any infected system within its respective network segment (e.g. by ﬁrewall\nblocking access to above network ports.)\n• If the above cannot be implemented we recommend the following:\n•If patient safety and treatment is not at risk, disconnect the uninfected product from the network and\nuse in standalone mode.\n•Reconnect the product only after the provided patch or remediation is installed on the system.\nSiemens Healthineers is able to patch systems capable of Remote Update Handling (RUH) much\nfaster by remote software distribution compared to onsite visits. Therefore customers of RUH\ncapable equipment are recommended to clarify the situation concerning patch availability and\nremaining risk in the local customer network with the Siemens Customer Care Center ﬁrst and\nthen to re-connect their systems in order to receive patches as fast as possible via Remote Update\nHandling. This ensures smooth and fast receipt of updates and therefore supports reestablishment\nof system operations."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "In addition, Siemens Healthineers recommends:\nSSA-701903 © Siemens AG 2018 Page 2 of 4\nSiemens Security Advisory by Siemens ProductCERT\nEnsure you have appropriate backups and system restoration procedures.\nFor speciﬁc patch and remediation guidance information contact your local Siemens Healthineers\nCustomer Service Engineer, portal or our Regional Support Center."
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on vulnerabilities in Siemens products and solutions, please contact the Siemens\nProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-701903.pdf",
+        "summary": "SSA-701903: SMBv1 Vulnerabilities inUltrasound Products from - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "ACUSON P300™ ultrasound system",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "ACUSON P300™ ultrasound system"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2017-0143",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially craftedrequests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0143",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Version V13.02 without US025/17/SInstall US025/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.03 and V13.21 without US012/17/SInstall US012/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.20 without US026/17/SInstall US026/17/S\nPlease contact customer service.\nACUSON P500™ ultrasound system VA10:\nVersion VA10 without US015/17/SInstall US015/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁg ->\nSelect Device -> Verify”\nACUSON P500™ ultrasound system VB10:\nVersion VB10 without US016/17/SInstall US016/17/S\nThe update will be automatically available for cus-\ntomers with remote support. If no remote support\nis available or for questions regarding the update\nprocedure, please contact customer service. The\ncorrect installation can be veriﬁed by validating\nthe software version in the following menu: “Con-\nﬁg -> Select Device -> Verify”\nACUSON SC2000™ ultrasound system 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17SInstall US010/17S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nSSA-701903 © Siemens AG 2018 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT\nACUSON SC2000™ ultrasound system 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nACUSON X700™ ultrasound system 1.0:\nAll versions V1.0 without US013/17/SInstall US013/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nACUSON X700™ ultrasound system 1.1:\nAll versions V1.1 without US014/17/SInstall US014/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nsyngo ® SC2000™ Workplace 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17/SInstall US010/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”\nsyngo ® SC2000™ Workplace 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0144",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially craftedrequests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0144",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Version V13.02 without US025/17/SInstall US025/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.03 and V13.21 without US012/17/SInstall US012/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.20 without US026/17/SInstall US026/17/S\nPlease contact customer service.\nACUSON P500™ ultrasound system VA10:\nVersion VA10 without US015/17/SInstall US015/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁg ->\nSelect Device -> Verify”\nACUSON P500™ ultrasound system VB10:\nVersion VB10 without US016/17/SInstall US016/17/S\nThe update will be automatically available for cus-\ntomers with remote support. If no remote support\nis available or for questions regarding the update\nprocedure, please contact customer service. The\ncorrect installation can be veriﬁed by validating\nthe software version in the following menu: “Con-\nﬁg -> Select Device -> Verify”\nACUSON SC2000™ ultrasound system 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17SInstall US010/17S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nSSA-701903 © Siemens AG 2018 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT\nACUSON SC2000™ ultrasound system 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nACUSON X700™ ultrasound system 1.0:\nAll versions V1.0 without US013/17/SInstall US013/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nACUSON X700™ ultrasound system 1.1:\nAll versions V1.1 without US014/17/SInstall US014/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nsyngo ® SC2000™ Workplace 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17/SInstall US010/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”\nsyngo ® SC2000™ Workplace 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0145",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially craftedrequests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0145",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Version V13.02 without US025/17/SInstall US025/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.03 and V13.21 without US012/17/SInstall US012/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.20 without US026/17/SInstall US026/17/S\nPlease contact customer service.\nACUSON P500™ ultrasound system VA10:\nVersion VA10 without US015/17/SInstall US015/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁg ->\nSelect Device -> Verify”\nACUSON P500™ ultrasound system VB10:\nVersion VB10 without US016/17/SInstall US016/17/S\nThe update will be automatically available for cus-\ntomers with remote support. If no remote support\nis available or for questions regarding the update\nprocedure, please contact customer service. The\ncorrect installation can be veriﬁed by validating\nthe software version in the following menu: “Con-\nﬁg -> Select Device -> Verify”\nACUSON SC2000™ ultrasound system 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17SInstall US010/17S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nSSA-701903 © Siemens AG 2018 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT\nACUSON SC2000™ ultrasound system 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nACUSON X700™ ultrasound system 1.0:\nAll versions V1.0 without US013/17/SInstall US013/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nACUSON X700™ ultrasound system 1.1:\nAll versions V1.1 without US014/17/SInstall US014/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nsyngo ® SC2000™ Workplace 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17/SInstall US010/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”\nsyngo ® SC2000™ Workplace 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0146",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially craftedrequests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C\nSSA-701903 © Siemens AG 2018 Page 3 of 4\nSiemens Security Advisory by Siemens ProductCERT"
+        }
+      ],
+      "cve": "CVE-2017-0146",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Version V13.02 without US025/17/SInstall US025/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.03 and V13.21 without US012/17/SInstall US012/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.20 without US026/17/SInstall US026/17/S\nPlease contact customer service.\nACUSON P500™ ultrasound system VA10:\nVersion VA10 without US015/17/SInstall US015/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁg ->\nSelect Device -> Verify”\nACUSON P500™ ultrasound system VB10:\nVersion VB10 without US016/17/SInstall US016/17/S\nThe update will be automatically available for cus-\ntomers with remote support. If no remote support\nis available or for questions regarding the update\nprocedure, please contact customer service. The\ncorrect installation can be veriﬁed by validating\nthe software version in the following menu: “Con-\nﬁg -> Select Device -> Verify”\nACUSON SC2000™ ultrasound system 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17SInstall US010/17S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nSSA-701903 © Siemens AG 2018 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT\nACUSON SC2000™ ultrasound system 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nACUSON X700™ ultrasound system 1.0:\nAll versions V1.0 without US013/17/SInstall US013/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nACUSON X700™ ultrasound system 1.1:\nAll versions V1.1 without US014/17/SInstall US014/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nsyngo ® SC2000™ Workplace 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17/SInstall US010/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”\nsyngo ® SC2000™ Workplace 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0147",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An authenticated remote attacker could potentially disclose information from the serverby sending\nspecially crafted packets to the SMBv1 server of affected Microsoft Windowssystems.\nCVSS v3.0 Base Score 5.3\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0147",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Version V13.02 without US025/17/SInstall US025/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.03 and V13.21 without US012/17/SInstall US012/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.20 without US026/17/SInstall US026/17/S\nPlease contact customer service.\nACUSON P500™ ultrasound system VA10:\nVersion VA10 without US015/17/SInstall US015/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁg ->\nSelect Device -> Verify”\nACUSON P500™ ultrasound system VB10:\nVersion VB10 without US016/17/SInstall US016/17/S\nThe update will be automatically available for cus-\ntomers with remote support. If no remote support\nis available or for questions regarding the update\nprocedure, please contact customer service. The\ncorrect installation can be veriﬁed by validating\nthe software version in the following menu: “Con-\nﬁg -> Select Device -> Verify”\nACUSON SC2000™ ultrasound system 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17SInstall US010/17S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nSSA-701903 © Siemens AG 2018 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT\nACUSON SC2000™ ultrasound system 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nACUSON X700™ ultrasound system 1.0:\nAll versions V1.0 without US013/17/SInstall US013/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nACUSON X700™ ultrasound system 1.1:\nAll versions V1.1 without US014/17/SInstall US014/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nsyngo ® SC2000™ Workplace 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17/SInstall US010/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”\nsyngo ® SC2000™ Workplace 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0148",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially craftedrequests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0148",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Version V13.02 without US025/17/SInstall US025/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.03 and V13.21 without US012/17/SInstall US012/17/S\nPlease contact customer service.\nACUSON P300™ ultrasound system:\nVersion V13.20 without US026/17/SInstall US026/17/S\nPlease contact customer service.\nACUSON P500™ ultrasound system VA10:\nVersion VA10 without US015/17/SInstall US015/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁg ->\nSelect Device -> Verify”\nACUSON P500™ ultrasound system VB10:\nVersion VB10 without US016/17/SInstall US016/17/S\nThe update will be automatically available for cus-\ntomers with remote support. If no remote support\nis available or for questions regarding the update\nprocedure, please contact customer service. The\ncorrect installation can be veriﬁed by validating\nthe software version in the following menu: “Con-\nﬁg -> Select Device -> Verify”\nACUSON SC2000™ ultrasound system 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17SInstall US010/17S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nSSA-701903 © Siemens AG 2018 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT\nACUSON SC2000™ ultrasound system 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct in-\nstallation can be veriﬁed by validating the software\nversion in the following menu: “System Conﬁg\nButton-> System Settings > Service”\nACUSON X700™ ultrasound system 1.0:\nAll versions V1.0 without US013/17/SInstall US013/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nACUSON X700™ ultrasound system 1.1:\nAll versions V1.1 without US014/17/SInstall US014/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Preset ->\nSelect Device -> Verify”\nsyngo ® SC2000™ Workplace 4:\nVersion 4.x less than 4.0E (VB10E) without\nUS010/17/SInstall US010/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”\nsyngo ® SC2000™ Workplace 5:\nVersion 5.0A (VB20A) without US011/17/SInstall US011/17/S\nPlease contact customer service. The correct\ninstallation can be veriﬁed by validating the soft-\nware version in the following menu: “Conﬁguration\nIcon -> User Conﬁguration -> System Settings >\nService”",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}

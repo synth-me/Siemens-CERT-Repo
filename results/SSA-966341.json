@@ -1,0 +1,353 @@
+{
+  "document": {
+    "title": "SSA-966341: SMBv1 Vulnerabilities inMolecular Diagnostics",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-966341",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.1",
+          "date": "2017-05-17T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2017-05-17T00:00:00Z",
+      "current_release_date": "2018-06-19T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Select Molecular Diagnostics products from Siemens Healthineers are affected by the Microsoft Windows\nSMBv1 vulnerabilities. The exploitability of the vulnerabilities depends on the actual conﬁguration and\ndeployment environment of each product.\nSiemens Healthineers has developed solutions for all affected products which are available via customer\nsupport. Siemens Healthineers also provides speciﬁc countermeasures for systems that have not yet\nbeen remediated."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens Healthineers has identiﬁed the following speciﬁc workarounds and mitigations that customers\ncan apply to reduce the risk:\n•Until solutions can be applied by the customer support and for end-of-support products, Siemens\nHealthineers recommends to isolate affected products that are listening on network ports 139/tcp,\n445/tcp or 3389/tcp from any infected system within its respective network segment (e.g. by ﬁrewall\nblocking access to above network ports).\n•If the above cannot be implemented and patient safety and treatment is not at risk, disconnect\nthe product from the network and use in standalone mode. Reconnect the product only after the\nSSA-966341 © Siemens AG 2018 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT\nprovided patch or remediation is installed on the system."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "In addition, Siemens Healthineers recommends the following:\n• Ensure you have appropriate backups and system restoration procedures.\n•For speciﬁc patch and remediation guidance information, contact your local Siemens Healthineers\ncustomer service engineer, portal or our Regional Support Center."
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-966341.pdf",
+        "summary": "SSA-966341: SMBv1 Vulnerabilities inMolecular Diagnostics - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Tissue Preparation System",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsSiemens Healthineers customer service engi-",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Tissue Preparation System"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2017-0143",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially crafted requests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0143",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "neers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Molecular System:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Sample Prep:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0144",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially crafted requests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0144",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "neers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Molecular System:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Sample Prep:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0145",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially crafted requests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C\nSSA-966341 © Siemens AG 2018 Page 2 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+        }
+      ],
+      "cve": "CVE-2017-0145",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "neers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Molecular System:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Sample Prep:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0146",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially crafted requests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0146",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "neers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Molecular System:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Sample Prep:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0147",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An authenticated remote attacker could potentially disclose information from the server by sending\nspecially crafted packets to the SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 4.3\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0147",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "neers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Molecular System:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Sample Prep:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-0148",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated remote attacker could execute arbitrary code via specially crafted requests sent to\nthe SMBv1 server of affected Microsoft Windows systems.\nCVSS v3.0 Base Score 9.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-0148",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "neers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Molecular System:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.\nVERSANT kPCR Sample Prep:\nAll versionsSiemens Healthineers customer service engi-\nneers have been deploying ﬁxes to affected sys-\ntems since a solution was available. If in doubt,\nplease contact your local Siemens Healthineers\nCustomer Service Engineer, portal or Regional\nSupport Center.",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}

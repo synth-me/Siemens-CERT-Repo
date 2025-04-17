@@ -1,0 +1,202 @@
+{
+  "document": {
+    "title": "SSA-731239: Vulnerabilities inSIMATIC S7-300 andS7-400 CPUs",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-731239",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.6",
+          "date": "2016-12-09T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2016-12-09T00:00:00Z",
+      "current_release_date": "2020-03-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Two vulnerabilities have been identiﬁed in SIMATIC S7-300 and S7-400 CPU families. One vulnerability\ncould lead to a Denial-of-Service, the other vulnerability could result in credential disclosure.\nSiemens recommends speciﬁc mitigations. Siemens will update this advisory when new information\nbecomes available."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Apply protection-level 3 (Read/Write protection for CVE-2016-9159)\n•Apply cell protection concept: https://www.siemens.com/cert/operational-guidelines-industrial-\nsecurity\n• Apply Defense-in-Depth concept: https://www.siemens.com/industrialsecurity\nSSA-731239 © Siemens 2020 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT\n•For SIMATIC S7-CPU 410 CPUs: Activate Field Interface Security in PCS 7 V9.0, and use a CP\n443-1 Adv. to communicate with ES/OS in order to mitigate vulnerability 2 (CVE-2016-9159)."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-731239.pdf",
+        "summary": "SSA-731239: Vulnerabilities inSIMATIC S7-300 andS7-400 CPUs - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Zhu WenZhe from Beijing Acorn Network Technology Co., Ltd. for coordinated disclosure of the\nvulnerabilies",
+        "summary": ""
+      },
+      {
+        "organization": "Industrial Control System Cyber Emergency Response Team (ICS-CERT) for reporting the vulnera-\nbility and coordination efforts",
+        "summary": ""
+      },
+      {
+        "organization": "Artem Zinenko from Kaspersky for pointing out that SIPLUS should also be mentioned",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "CPUs and SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsUpdate to V3.X.14 to mitigate the ﬁrst vulnerability",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "CPUs and SIPLUS variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2016-9158",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Specially crafted packets sent to port 80/tcp could cause the affected devices to go into defect mode.\nA cold restart is required to recover the system."
+        }
+      ],
+      "cve": "CVE-2016-9158",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "(CVE-2016-9158), and follow recommendations\nfrom section Workaround and Mitigations for the\nsecond vulnerability (CVE-2016-9159).\nhttps://support.industry.siemens.com/cs/ww/en/\nps/13752/dl\nSIMATIC S7-400 PN/DP V6 and below CPU fam-\nily (incl. SIPLUS variants):\nAll versionsUpdate to V6.0.6 to mitigate the ﬁrst vulnerability\n(CVE-2016-9158), and follow recommendations\nfrom section Workaround and Mitigations for the\nsecond vulnerability (CVE-2016-9159).\nhttps://support.industry.siemens.com/cs/de/en/\nview/109474874\nSIMATIC S7-400 PN/DP V7 CPU family (incl.\nSIPLUS variants):\nAll versionsUpdate to V7.0.2 to mitigate the ﬁrst vulnerability\n(CVE-2016-9158), and follow recommendations\nfrom section Workaround and Mitigations for the\nsecond vulnerability (CVE-2016-9159).\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109752685\nSIMATIC S7-410 V8 CPU family (incl. SIPLUS\nvariants):\nAll versions\nonly affected by CVE-2016-9159Update to V8.2 and follow recommendations from\nsection Workarounds and Mitigations.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109476571",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2016-9159",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with network access to port 102/tcp (ISO-TSAP) or via Proﬁbus could obtain credentials\nfrom the PLC if protection-level 2 is conﬁgured on the affected devices."
+        }
+      ],
+      "cve": "CVE-2016-9159",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Information Exposure"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "(CVE-2016-9158), and follow recommendations\nfrom section Workaround and Mitigations for the\nsecond vulnerability (CVE-2016-9159).\nhttps://support.industry.siemens.com/cs/ww/en/\nps/13752/dl\nSIMATIC S7-400 PN/DP V6 and below CPU fam-\nily (incl. SIPLUS variants):\nAll versionsUpdate to V6.0.6 to mitigate the ﬁrst vulnerability\n(CVE-2016-9158), and follow recommendations\nfrom section Workaround and Mitigations for the\nsecond vulnerability (CVE-2016-9159).\nhttps://support.industry.siemens.com/cs/de/en/\nview/109474874\nSIMATIC S7-400 PN/DP V7 CPU family (incl.\nSIPLUS variants):\nAll versionsUpdate to V7.0.2 to mitigate the ﬁrst vulnerability\n(CVE-2016-9158), and follow recommendations\nfrom section Workaround and Mitigations for the\nsecond vulnerability (CVE-2016-9159).\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109752685\nSIMATIC S7-410 V8 CPU family (incl. SIPLUS\nvariants):\nAll versions\nonly affected by CVE-2016-9159Update to V8.2 and follow recommendations from\nsection Workarounds and Mitigations.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109476571",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}

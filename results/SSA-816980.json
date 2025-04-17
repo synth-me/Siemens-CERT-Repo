@@ -1,0 +1,185 @@
+{
+  "document": {
+    "title": "SSA-816980: Multiple Web Vulnerabilities inSIMATIC MV400 Family",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-816980",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.1",
+          "date": "2019-06-11T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2019-06-11T00:00:00Z",
+      "current_release_date": "2021-03-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The SIMATIC MV400 product family is affected by two web vulnerabilities. The vulnerabilities could allow\nan authenticated user to escalate privileges, or might expose sensitive information to an attacker that is\nable to eavesdrop the communication.\nSiemens has released an update for the SIMATIC MV400 family and recommends to update to the latest\nversion."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•By setting the DISA bit, changes to the project by logged-in users can be prevented. Please refer to\nthe Operating Instructions for more details: https://support.industry.siemens.com/cs/ww/en/view/\n84553392\n• Protect network access to affected devices."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories\nSSA-816980 © Siemens 2021 Page 2 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-816980.pdf",
+        "summary": "SSA-816980: Multiple Web Vulnerabilities inSIMATIC MV400 Family - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC MV400 family",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All Versions < V7.0.6Update to V7.0.6",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC MV400 family"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-10925",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An authenticated attacker could escalate privileges by sending specially crafted requests to the\nintegrated webserver.\nThe security vulnerability can be exploited by an attacker with network access to the device. Valid\nuser credentials, but no user interaction are required. Successful exploitation compromises integrity\nand availability of the device.\nAt the time of advisory publication no public exploitation of this security vulnerability was known."
+        }
+      ],
+      "cve": "CVE-2019-10925",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109793481/",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-10926",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Communication with the device is not encrypted. Data transmitted between the device and the user\ncan be obtained by an attacker in a privileged network position.\nThe security vulnerability can be exploited by an attacker in a privileged network position which\nallows eavesdropping the communication between the affected device and the user. The user must\ninvoke a session. Successful exploitation of the vulnerability compromises conﬁdentiality of the data\ntransmitted."
+        }
+      ],
+      "cve": "CVE-2019-10926",
+      "cwe": {
+        "id": "CWE-319",
+        "name": "Cleartext Transmission of Sensitive Information"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109793481/",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}

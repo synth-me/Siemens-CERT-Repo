@@ -1,0 +1,152 @@
+{
+  "document": {
+    "title": "SSA-982399: Missing Authentication inTIM1531 IRCModules",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-982399",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.3",
+          "date": "2018-12-11T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2018-12-11T00:00:00Z",
+      "current_release_date": "2020-02-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The latest update for TIM 1531 IRC ﬁxes a vulnerability. The device was missing proper authentication\nwhen connecting on port 102/tcp, although conﬁgured.\nAn attacker needs to be able to connect to port 102/tcp of an affected device in order to exploit this\nvulnerability.\nThe vulnerability could allow an attacker to perform administrative operations.\nSiemens has released updates for TIM 1531 IRC modules."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Restrict access to port 102/tcp on TIM 1531 IRC to trusted IP addresses\n• Update ﬁrmware to version V2.0 (and reload the TIM station from engineering)"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-982399.pdf",
+        "summary": "SSA-982399: Missing Authentication inTIM1531 IRCModules - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Artem Zinenko from Kaspersky for pointing out that SIPLUS should also be mentioned",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "TIM 1531 IRC (incl. SIPLUS NET variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V2.0Update to V2.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "TIM 1531 IRC (incl. SIPLUS NET variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2018-13816",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The device was missing proper authentication on port 102/tcp, although conﬁgured.\nSuccessful exploitation requires an attacker to be able to send packets to port 102/tcp of the affected\ndevice. No user interaction and no user privileges are required to exploit the vulnerability.\nAt the time of advisory publication no public exploitation of this vulnerability was known."
+        }
+      ],
+      "cve": "CVE-2018-13816",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109762596",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}
