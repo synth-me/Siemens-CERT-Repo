@@ -1,0 +1,236 @@
+{
+  "document": {
+    "title": "SSA-804486: Multiple Vulnerabilities inSIMATIC Panels andSIMATIC",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-804486",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.1",
+          "date": "2019-05-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2019-05-14T00:00:00Z",
+      "current_release_date": "2020-02-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The latest update for SIMATIC Panel Software and SIMATIC WinCC (TIA Portal) ﬁxes two vulnerabilities.\nThe most severe is a vulnerability which could allow an attacker with network access to the integrated\ndevice to read and write variables via SNMP .\nSiemens recommends to update to the newest version."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Restrict access to the web interface of the affected devices\n• Restrict access to port 161/udp to trusted devices"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nSSA-804486 © Siemens 2020 Page 3 of 4\nSiemens Security Advisory by Siemens ProductCERT\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-804486.pdf",
+        "summary": "SSA-804486: Multiple Vulnerabilities inSIMATIC Panels andSIMATIC - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Artem Zinenko from Kaspersky for pointing out that SIPLUS should also be mentioned",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V15.1 Update 1Update SIMATIC WinCC (TIA Portal) to V15.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIPLUS variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-6572",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected device offered SNMP read and write capacities with a publicly know hardcoded community\nstring.\nThe security vulnerability could be exploited by an attacker with network access to the affected device.\nSuccessful exploitation requires no system privileges and no user interaction. An attacker could use\nthe vulnerability to compromise conﬁdentiality and integrity of the affected system.\nAt the time of advisory publication no public exploitation of this security vulnerability was known."
+        }
+      ],
+      "cve": "CVE-2019-6572",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Information Exposure"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Update 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI Comfort Outdoor Panels 7\" & 15\"\n(incl. SIPLUS variants):\nAll versions < V15.1 Update 1Update SIMATIC WinCC (TIA Portal) to V15.1\nUpdate 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI KTP Mobile Panels KTP400F ,\nKTP700, KTP700F , KTP900 and KTP900F:\nAll versions < V15.1 Update 1Update SIMATIC WinCC (TIA Portal) to V15.1\nUpdate 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC Runtime Advanced:\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC Runtime Professional:\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC (TIA Portal):\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI Classic Devices - TP/MP/OP/MP\nMobile Panel (incl. SIPLUS variants):\nAll versionsSee recommendations from section Workarounds\nand Mitigations\nSSA-804486 © Siemens 2020 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-6576",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with network access to affected devices could potentially obtain a TLS session key. If the\nattacker is able to observe TLS trafﬁc between a legitimate user and the device, then the attacker\ncould decrypt the TLS trafﬁc.\nThe security vulnerability could be exploited by an attacker who has network access to the web\ninterface of the device and who is able to observe TLS trafﬁc between legitimate users and the web\ninterface of the affected device. The vulnerability could impact the conﬁdentiality of the communication\nbetween the affected device and a legitimate user.\nAt the time of advisory publication no public exploitation of the security vulnerability was known."
+        }
+      ],
+      "cve": "CVE-2019-6576",
+      "cwe": {
+        "id": "CWE-310",
+        "name": "Cryptographic Issues"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Update 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI Comfort Outdoor Panels 7\" & 15\"\n(incl. SIPLUS variants):\nAll versions < V15.1 Update 1Update SIMATIC WinCC (TIA Portal) to V15.1\nUpdate 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI KTP Mobile Panels KTP400F ,\nKTP700, KTP700F , KTP900 and KTP900F:\nAll versions < V15.1 Update 1Update SIMATIC WinCC (TIA Portal) to V15.1\nUpdate 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC Runtime Advanced:\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC Runtime Professional:\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC (TIA Portal):\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI Classic Devices - TP/MP/OP/MP\nMobile Panel (incl. SIPLUS variants):\nAll versionsSee recommendations from section Workarounds\nand Mitigations\nSSA-804486 © Siemens 2020 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-6577",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The integrated web server could allow Cross-Site Scripting (XSS) attacks if an attacker is able to\nmodify particular parts of the device conﬁguration via SNMP .\nThe security vulnerability could be exploited by an attacker with network access to the affected system.\nSuccessful exploitation requires system privileges and user interaction. An attacker could use the\nvulnerability to compromise conﬁdentiality and the integrity of the affected system.\nAt the stage of publishing this security advisory no public exploitation is known."
+        }
+      ],
+      "cve": "CVE-2019-6577",
+      "cwe": {
+        "id": "CWE-80",
+        "name": "Improper Neutralization of Script-Related HTML Tags"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Update 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI Comfort Outdoor Panels 7\" & 15\"\n(incl. SIPLUS variants):\nAll versions < V15.1 Update 1Update SIMATIC WinCC (TIA Portal) to V15.1\nUpdate 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI KTP Mobile Panels KTP400F ,\nKTP700, KTP700F , KTP900 and KTP900F:\nAll versions < V15.1 Update 1Update SIMATIC WinCC (TIA Portal) to V15.1\nUpdate 1 or newer, and then update panel to\nV15.1 Update 1 or newer.\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC Runtime Advanced:\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC Runtime Professional:\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC WinCC (TIA Portal):\nAll versions < V15.1 Update 1Update to V15.1 Update 1 or newer\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109763890/\nSIMATIC HMI Classic Devices - TP/MP/OP/MP\nMobile Panel (incl. SIPLUS variants):\nAll versionsSee recommendations from section Workarounds\nand Mitigations\nSSA-804486 © Siemens 2020 Page 1 of 4\nSiemens Security Advisory by Siemens ProductCERT",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "document": {
+    "title": "SSA-740012: SMBv1 Vulnerabilities in Biograph mMR from",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-740012",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "",
+          "date": "",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "",
+      "current_release_date": "",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Biograph mMR devices from Siemens Healthineers are affected by the Microsoft Windows\nSMBv1 vulnerabilities. The exploitability of the vulnerabilities depends on the actual\nconfiguration and deployment environment of each product.\nSiemens provides updates for the affected products and recommends specific\ncountermeasures until patches can be applied.\nAFFECTED PRODUCTS\n· Biograph mMR: All Versions without SecurityUpdate_SU28_F2 (SU28)\nDESCRIPTION\nSiemens Healthineers Biograph mMR devices are used in hospital environments for imaging.\nDetailed information about the vulnerabilities is provided below."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": ""
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-740012.pdf",
+        "summary": "SSA-740012: SMBv1 Vulnerabilities in Biograph mMR from - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": []
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

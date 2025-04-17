@@ -1,0 +1,143 @@
+{
+  "document": {
+    "title": "SSA-616199: BlueKeep Vulnerability Identiﬁed inRAPIDPoint® 500",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-616199",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.2",
+          "date": "2019-05-24T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2019-05-24T00:00:00Z",
+      "current_release_date": "2020-01-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Microsoft has released updates for several versions of Microsoft Windows, which ﬁx a vulnerability in the\nRemote Desktop Service. The vulnerability could allow an unauthenticated remote attacker to execute\narbitrary code on the target system if the system exposes the service to the network.\nRAPIDPoint® 500 systems operating on Windows XP are affected by this vulnerability."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens Healthineers has identiﬁed the following speciﬁc workarounds and mitigations that customers\ncan apply to reduce the risk:\n• Conﬁgure your external ﬁrewall to block port 3389/tcp if not already done.\n•Secure the surrounding environment according to the recommendations provided by Microsoft to\nminimize the risk.\n• Ensure you have appropriate backups and system restoration procedures."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "In addition, Siemens Healthineers recommends the following:\n• Ensure you have appropriate backups and system restoration procedures.\n•For speciﬁc patch and remediation guidance information, contact your local Siemens Healthineers\ncustomer service engineer, portal or our Regional Support Center."
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-616199.pdf",
+        "summary": "SSA-616199: BlueKeep Vulnerability Identiﬁed inRAPIDPoint® 500 - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "RAPIDPoint® 500",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "RAPIDPoint® 500"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-0708",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated attacker with access to port 3389/tcp in an affected device may execute arbitrary\ncommands with elevated privileges.\nThe security vulnerability could be exploited by an unauthenticated attacker with network access to the\naffected device. No user interaction is required to exploit this vulnerability. The vulnerability impacts\nthe conﬁdentiality, integrity, and availability of the affected device."
+        }
+      ],
+      "cve": "CVE-2019-0708",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "Version 2.3.2 and earlierThe software update to V2.3.3 will be installed on\nthe next service visit or an appointment will be\nscheduled to update the system(s).",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}

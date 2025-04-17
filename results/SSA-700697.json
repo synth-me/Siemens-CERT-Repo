@@ -1,0 +1,143 @@
+{
+  "document": {
+    "title": "SSA-700697: Denial-of-Service Vulnerability inWeb Server of",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-700697",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-12-08T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2020-12-08T00:00:00Z",
+      "current_release_date": "2020-12-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIMATIC ET 200SP Open Controller V20.8 and SIMATIC S7-1500 Software Controller V20.8 are affected\nby a denial-of-service vulnerability in the web server.\nSiemens has released updates for the affected products and recommends to update to the latest version."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•If the PC Station web server does not restart automatically Windows reboot is required. This can\nbe done while the control system is running as the PLC control functionality is not affected."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-700697.pdf",
+        "summary": "SSA-700697: Denial-of-Service Vulnerability inWeb Server of - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "(incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "(incl. SIPLUS variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-15796",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The web server of the affected products contains a vulnerability that could allow a remote attacker to\ntrigger a denial-of-service condition by sending a specially crafted HTTP request."
+        }
+      ],
+      "cve": "CVE-2020-15796",
+      "cwe": {
+        "id": "CWE-248",
+        "name": "Uncaught Exception"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "V20.8Update to V21.8\nhttps://support.industry.siemens.com/cs/us/en/\nview/109759122\nSIMATIC S7-1500 Software Controller:\nV20.8Update to V21.8\nhttps://support.industry.siemens.com/cs/us/en/\nview/109478528",
+        "url": "https://support.industry.siemens.com/cs/us/en/"
+      },
+      "references": []
+    }
+  ]
+}

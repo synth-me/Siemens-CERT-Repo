@@ -1,0 +1,156 @@
+{
+  "document": {
+    "title": "SSA-635659: Heartbleed Vulnerability inSiemens Industrial Products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-635659",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.4",
+          "date": "2014-04-15T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2014-04-15T00:00:00Z",
+      "current_release_date": "2020-02-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The “Heartbleed” vulnerability in the OpenSSL cryptographic software library (CVE-2014-0160) affects\nseveral Siemens industrial products.\nSiemens has resolved the issue in all affected industrial products and provides updates which ﬁx this\nvulnerability."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• WinCC OA: Use VPN for protecting SSL trafﬁc or use WinCC OA in a trusted network\n• S7-1500: Disable web server or limit web server access to trusted networks only\n• CP1543-1: Disable FTPS, use FTPS in trusted network or use VPN functionality to tunnel FTPS\n•APE: Update OpenSSL to 1.0.1g before distributing a solution. Follow instructions from Ruggedcom\n(see http://support.automation.siemens.com/WW/view/en/97664169) to patch APE 2.0\nSSA-635659 © Siemens 2020 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-635659.pdf",
+        "summary": "SSA-635659: Heartbleed Vulnerability inSiemens Industrial Products - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Joel Langill from Infrastructure Defense Security Services for coordinated disclosure",
+        "summary": ""
+      },
+      {
+        "organization": "Artem Zinenko from Kaspersky for pointing out that SIPLUS should also be mentioned",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "APE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "APE"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2014-0160",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected products could allow attackers to read sensitive data (this includes private keys and user\ncredentials) from the process memory if the attackers have network access to the affected devices."
+        }
+      ],
+      "cve": "CVE-2014-0160",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "V2.0 when SSL/TLS component is used in cus-\ntomer implementationUpdate to V2.0.1\nhttp://support.automation.siemens.com/WW/\nview/en/97664169\nCP 1543-1 (incl. SIPLUS NET variants):\nV1.1 when FTPS activeUpdate to V1.1.22\nhttp://support.automation.siemens.com/WW/\nview/en/92417421\nSIMATIC S7-1500 CPU family (incl. related\nET200 CPUs and SIPLUS variants):\nV1.5 when HTTPS activeUpdate to V1.5.1\nhttp://support.automation.siemens.com/WW/\nview/en/67295862/133100\nWinCC OA:\nV3.12Update to V3.12-P006\nhttps://portal.etm.at/index.php?option=com_\ncontent&view=category&id=65&layout=blo\neLAN-8.2:\nAll versions < V8.3.3 when RIP is usedUpdate to V8.3.3\nThe ﬁrmware update can be obtained for free by\neither submitting a support request online (http://\nwww.siemens.com/automation/support-request)\nor by calling a local hotline center (see http:\n//www.automation.siemens.com/mcms/aspa-db/\nen/automation-technology/Pages/default.aspx)",
+        "url": "http://support.automation.siemens.com/WW/"
+      },
+      "references": []
+    }
+  ]
+}

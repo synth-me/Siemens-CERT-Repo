@@ -1,0 +1,269 @@
+{
+  "document": {
+    "title": "SSA-689071: DNSMasq Vulnerabilities inSCALANCE W1750D,",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-689071",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.3",
+          "date": "2017-11-17T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2017-11-17T00:00:00Z",
+      "current_release_date": "2020-10-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Multiple vulnerabilities have been identiﬁed in SCALANCE W1750D, SCALANCE M-800 / S615 and\nRUGGEDCOM RM1224 devices. The highest scored vulnerability could allow a remote attacker to crash\nthe DNS service or execute arbitrary code. The attacker must be able to craft malicious DNS responses\nand inject them into the network in order to exploit the vulnerability.\nSiemens has released updates for the affected devices, recommends to update, and provides speciﬁc\ncountermeasures for unpatched devices."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•SCALANCE M-800 / S615 and RUGGEDCOM RM1224: Disable DNS proxy in the device conﬁgu-\nration (System - DNS - DNS Proxy - Disable Checkbox „Enable DNS Proxy“), and conﬁgure the\nconnected devices in the internal network to use a different DNS server\n•SCALANCE W1750D: If “OpenDNS”, “Captive Portal” or “URL redirection” functionality is not used,\ndeploy ﬁrewall rules in the device conﬁguration to block incoming access to port 53/UDP"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity\nSSA-689071 © Siemens 2020 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-689071.pdf",
+        "summary": "SSA-689071: DNSMasq Vulnerabilities inSCALANCE W1750D, - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "RUGGEDCOM RM1224",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V5.0Update to V5.0 or later version",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "RUGGEDCOM RM1224"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2017-13704",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker could cause a crash of the DNSmasq process by sending specially crafted request\nmessages to the service on port 53/udp."
+        }
+      ],
+      "cve": "CVE-2017-13704",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE M-800 / S615:\nAll versions < V5.0Update to V5.0 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE W1750D:\nAll versions < V6.5.1.5Update to V6.5.1.5 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109778052",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-14491",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker could cause a crash or potentially execute arbitrary code by sending specially crafted DNS\nresponses to the DNSmasq process. In order to exploit this vulnerability, an attacker must be able to\ntrigger DNS requests from the device, and must be in a privileged position to inject malicious DNS\nresponses."
+        }
+      ],
+      "cve": "CVE-2017-14491",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE M-800 / S615:\nAll versions < V5.0Update to V5.0 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE W1750D:\nAll versions < V6.5.1.5Update to V6.5.1.5 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109778052",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-14495",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker could cause a crash of the DNSmasq process by sending specially crafted request\nmessages to the service on port 53/udp."
+        }
+      ],
+      "cve": "CVE-2017-14495",
+      "cwe": {
+        "id": "CWE-399",
+        "name": "Resource Management Errors"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE M-800 / S615:\nAll versions < V5.0Update to V5.0 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE W1750D:\nAll versions < V6.5.1.5Update to V6.5.1.5 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109778052",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2017-14496",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker could cause a crash of the DNSmasq process by sending specially crafted request\nmessages to the service on port 53/udp."
+        }
+      ],
+      "cve": "CVE-2017-14496",
+      "cwe": {
+        "id": "CWE-191",
+        "name": "Integer Underﬂow (Wrap or Wraparound)"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE M-800 / S615:\nAll versions < V5.0Update to V5.0 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109757544\nSCALANCE W1750D:\nAll versions < V6.5.1.5Update to V6.5.1.5 or later version\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109778052",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}
