@@ -1,0 +1,194 @@
+{
+  "document": {
+    "title": "SSA-493830: Privilege Escalation inROX II",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-493830",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2018-10-09T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2018-10-09T00:00:00Z",
+      "current_release_date": "2018-10-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The latest update for ROX II ﬁxes two vulnerabilities. One vulnerability could allow an attacker with\na low-privileged user account to execute arbitrary commands. The other vulnerability could allow an\nattacker with a low-privileged user account to escalate his privileges.\nSiemens recommends to update to the new version as soon as possible."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Restrict network access to prevent potential attackers from accessing 22/tcp if possible"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-493830.pdf",
+        "summary": "SSA-493830: Privilege Escalation inROX II - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Gerard Harney from NCC Group for coordinated disclosure of CVE-2018-13801",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "ROX II",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V2.12.1Update to V2.12.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "ROX II"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2018-13801",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with network access to port 22/tcp and valid low-privileged user credentials for the target\ndevice could perform a privilege escalation and gain root privileges.\nSuccessful exploitation requires user privileges of a low-privileged user but no user interaction. The\nvulnerability could allow an attacker to compromise conﬁdentiality, integrity and availability of the\nsystem.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 8.8\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2018-13801",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/us/en/\nview/109760683",
+        "url": "https://support.industry.siemens.com/cs/us/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2018-13802",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An authenticated attacker with a high-privileged user account access via SSH could circumvent\nrestrictions in place and execute arbitrary operating system commands.\nSuccessful exploitation requires that the attacker has network access to the SSH interface in on port\n22/tcp. The attacker must be authenticated to exploit the vulnerability. The vulnerability could allow an\nattacker to execute arbitrary code on the device.\nAt the time of advisory publication no public exploitation of this security vulnerability was known.\nCVSS v3.0 Base Score 7.2\nCVSS Vector CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2018-13802",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/us/en/\nview/109760683",
+        "url": "https://support.industry.siemens.com/cs/us/en/"
+      },
+      "references": []
+    }
+  ]
+}

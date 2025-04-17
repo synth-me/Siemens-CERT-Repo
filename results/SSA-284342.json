@@ -1,6 +1,6 @@
 {
   "document": {
-    "title": "SSA-023589: SMBv1 Vulnerabilities in Advanced Therapy Products",
+    "title": "SSA-284342:  Vulnerabilities in Automation License Manager (ALM)",
     "category": "Siemens Security Advisory",
     "csaf_version": "2.0",
     "publisher": {
@@ -16,7 +16,7 @@
       }
     },
     "tracking": {
-      "id": "SSA-023589",
+      "id": "SSA-284342",
       "status": "final",
       "version": "1",
       "revision_history": [
@@ -40,7 +40,7 @@
       {
         "title": "Summary",
         "category": "summary",
-        "text": "Select Advanced Therapy products from Siemens Healthineers are affected by the Microsoft\nWindows SMBv1 vulnerabilities. The exploitability of the vulnerabilities depends on the actual\nconfiguration and deployment environment of each product.\nSiemens is working on updates for the affected products and recommends specific\ncountermeasures until fixes are available.\nAFFECTED PRODUCTS\n· AXIOM Artis: All versions without AX038/17/S\n· Artis one, Q and pheno: All versions without AX039/17/S\n· Artis zee:\no All versions (except VD11B, VD11C) without AX038/17/S\no Versions VD11B, VD11C without AX039/17/S\n· Sensis: AQU: All versions without AX046/17/S\n· Sensis PPWS: All versions without AX046/17/S\n· Sensis HES: All versions without AX046/17/S\n· Sensis SIS: All versions without AX046/17/S\n· Sensis VM Server: All versions without AX046/17/S\n· Leonardo/X-Workplace:\no All versions (except VD10E, VD11B, VD20B) without AX041/17/S\no Versions VD10E, VD11B, VD20B without AX042/17/S\n· Arcadis family: All versions without AX043/17/S\nDESCRIPTION\nSiemens Healthineers Advanced Therapies (AT) products are used in interventional\nlaboratories and (hybrid) ORs for diagnostic and therapeutic procedures.\nDetailed information about the vulnerabilities is provided below."
+        "text": "The latest update of Automation License Manager (ALM) fixes three vulnerabilities. One of\nthe vulnerabilities could allow a remote attacker to obtain write access to the hard disk.\nAFFECTED PRODUCTS\nAutomation License Manager (ALM): All versions < V5.3 SP3 Update 1\nDESCRIPTION\nThe Automation License Manager (ALM) centrally manages license keys for various Siemens\nsoftware products. Software products requiring license keys automatically report this\nrequirement to the ALM. When the ALM finds a valid license key for this software, the\nsoftware can be used in conformity with the end user license agreement.\nDetailed information about the vulnerabilities is provided below."
       },
       {
         "title": "Workarounds",
@@ -66,8 +66,8 @@
     "references": [
       {
         "category": "self",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-023589.pdf",
-        "summary": "SSA-023589: SMBv1 Vulnerabilities in Advanced Therapy Products - PDF Version"
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-284342.pdf",
+        "summary": "SSA-284342:  Vulnerabilities in Automation License Manager (ALM) - PDF Version"
       }
     ],
     "acknowledgments": []

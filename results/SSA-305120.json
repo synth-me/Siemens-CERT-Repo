@@ -1,0 +1,492 @@
+{
+  "document": {
+    "title": "SSA-305120: Vulnerabilities inSICAM MMU, SICAM Tand SICAM",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-305120",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-07-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2020-07-14T00:00:00Z",
+      "current_release_date": "2020-07-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SICAM MMU, SICAM T and the discontinued SICAM SGU devices are affected by multiple security\nvulnerabilities which could allow an attacker to perform a variety of attacks. This may include unauthen-\nticated ﬁrmware installation, remote code execution and leakage of conﬁdential data like passwords.\nSiemens has released updates to introduce authentication to the web application. It is still recommended\nto implement further mitigations, as most of the vulnerabilities might not be sufﬁciently mitigated by this."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•The ﬁrmware updates to SICAM T and SICAM MMU introduce authentication to the web application\nand remove some unnecessary functionality. The web authentication functionality reduces the risk\nof access to the device’s web application for executing administrative commands by unauthenticated\nusers.\n•Due to hardware constraints, encryption is not possible on the devices. Conﬁdential data such as\npasswords handled by the devices need to be protected on the network by other means, e.g. by\nVPN.\n•The risk for remote code execution and unauthenticated ﬁrmware installation can be mitigated by\nensuring encryption and authentication between the user and the device, e.g. by VPN.\n•Using a modern and up to date browser while accessing the web application might reduce the risk\nof Cross-Site-Scripting attacks.\nSSA-305120 © Siemens 2020 Page 1 of 5\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to\nbuild resilience into the power grids by applying multi-level redundant secondary protection schemes. It is\ntherefore recommended that the operators check whether appropriate resilient protection measures are\nin place. The risk of cyber incidents impacting the grid’s reliability can thus be minimized by virtue of the\ngrid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling\nand documented procedures made available with the product. If supported by the product, an automated\nmeans to apply the security updates across multiple product instances may be used. Siemens strongly\nrecommends prior validation of any security update before being applied, and supervision by trained staff\nof the update process in the target environment.\nAs a general security measure Siemens strongly recommends to protect network access with appropriate\nmechanisms (e.g. ﬁrewalls, segmentation, VPN). It is advised to conﬁgure the environment according to\nour operational guidelines in order to run the devices in a protected IT environment.\nRecommended security guidelines to Digital Grid Products can be found at:\nhttps://www.siemens.com/gridsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-305120.pdf",
+        "summary": "SSA-305120: Vulnerabilities inSICAM MMU, SICAM Tand SICAM - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Luca Simbürger, Luca Hofschuster, Lukas Kahnert, Jakob Lachermeier, Christian Costa, Simon Hu-\nber, Lukas Sas Brunschier, Florian Freiberger, Florian Burger, Marie-Louise Oostveen, Magdalena\nThomeczek, and Johann Uhrmann from Landshut University of Applied Sciences for coordinated\ndisclosure of CVE-2020-10037",
+        "summary": ""
+      },
+      {
+        "organization": "Max Hirschberger, Simon Hofmann, and Peter Knauer from Augsburg University of Applied Sciences\nfor coordinated disclosure of CVE-2020-10038 to CVE-2020-10045",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SICAM MMU",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V2.05Update to V2.05 to introduce authentication in the",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SICAM MMU"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-10037",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "By performing a ﬂooding attack against the web server, an attacker might be able to gain read access\nto the device’s memory, possibly revealing conﬁdential information."
+        }
+      ],
+      "cve": "CVE-2020-10037",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10038",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with access to the device’s web server might be able to execute administrative commands\nwithout authentication."
+        }
+      ],
+      "cve": "CVE-2020-10038",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10039",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker in a privileged network position between a legitimate user and the web server might be\nable to conduct a Man-in-the-middle attack and gain read and write access to the transmitted data."
+        }
+      ],
+      "cve": "CVE-2020-10039",
+      "cwe": {
+        "id": "CWE-311",
+        "name": "Missing Encryption of Sensitive Data"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10040",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with local access to the device might be able to retrieve some passwords in clear text."
+        }
+      ],
+      "cve": "CVE-2020-10040",
+      "cwe": {
+        "id": "CWE-916",
+        "name": "Use of Password Hash With Insufﬁcient Computational"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10041",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A stored Cross-Site-Scripting (XSS) vulnerability is present in different locations of the web application.\nAn attacker might be able to take over a session of a legitimate user."
+        }
+      ],
+      "cve": "CVE-2020-10041",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10042",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A buffer overﬂow in various positions of the web application might enable an attacker with access to\nthe web application to execute arbitrary code over the network."
+        }
+      ],
+      "cve": "CVE-2020-10042",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input (‘Classic"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10043",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The web server could allow Cross-Site Scripting (XSS) attacks if unsuspecting users are tricked into\naccessing a malicious link."
+        }
+      ],
+      "cve": "CVE-2020-10043",
+      "cwe": {
+        "id": "CWE-80",
+        "name": "Improper Neutralization of Script-Related HTML Tags"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10044",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with access to the network could be able to install specially crafted ﬁrmware to the device."
+        }
+      ],
+      "cve": "CVE-2020-10044",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-10045",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An error in the challenge-response procedure could allow an attacker to replay authentication trafﬁc\nand gain access to protected areas of the web application."
+        }
+      ],
+      "cve": "CVE-2020-10045",
+      "cwe": {
+        "id": "CWE-294",
+        "name": "Authentication Bypass by Capture-replay"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:H/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "web application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9663-1AA00-1AA0\nSICAM SGU:\nAll versionsFor RTU applications, Siemens recommends to\nupgrade the discontinued SICAM SGU devices to\nSICAM A8000 RTUs.\nSICAM T:\nAll versions < V2.18Update to V2.18 to introduce authentication in the\nweb application to mitigate some web application\nissues.\nhttps://support.industry.siemens.com/cs/ww/en/\nps/7KG9661-1AA00-1AA0",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}

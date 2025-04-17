@@ -1,6 +1,6 @@
 {
   "document": {
-    "title": "SSA-023589: SMBv1 Vulnerabilities in Advanced Therapy Products",
+    "title": "SSA-120908:  Vulnerabilities in Siemens Scalance W-7xx (a/b/g) Product Family",
     "category": "Siemens Security Advisory",
     "csaf_version": "2.0",
     "publisher": {
@@ -16,7 +16,7 @@
       }
     },
     "tracking": {
-      "id": "SSA-023589",
+      "id": "SSA-120908",
       "status": "final",
       "version": "1",
       "revision_history": [
@@ -40,7 +40,7 @@
       {
         "title": "Summary",
         "category": "summary",
-        "text": "Select Advanced Therapy products from Siemens Healthineers are affected by the Microsoft\nWindows SMBv1 vulnerabilities. The exploitability of the vulnerabilities depends on the actual\nconfiguration and deployment environment of each product.\nSiemens is working on updates for the affected products and recommends specific\ncountermeasures until fixes are available.\nAFFECTED PRODUCTS\n· AXIOM Artis: All versions without AX038/17/S\n· Artis one, Q and pheno: All versions without AX039/17/S\n· Artis zee:\no All versions (except VD11B, VD11C) without AX038/17/S\no Versions VD11B, VD11C without AX039/17/S\n· Sensis: AQU: All versions without AX046/17/S\n· Sensis PPWS: All versions without AX046/17/S\n· Sensis HES: All versions without AX046/17/S\n· Sensis SIS: All versions without AX046/17/S\n· Sensis VM Server: All versions without AX046/17/S\n· Leonardo/X-Workplace:\no All versions (except VD10E, VD11B, VD20B) without AX041/17/S\no Versions VD10E, VD11B, VD20B without AX042/17/S\n· Arcadis family: All versions without AX043/17/S\nDESCRIPTION\nSiemens Healthineers Advanced Therapies (AT) products are used in interventional\nlaboratories and (hybrid) ORs for diagnostic and therapeutic procedures.\nDetailed information about the vulnerabilities is provided below."
+        "text": ""
       },
       {
         "title": "Workarounds",
@@ -66,8 +66,8 @@
     "references": [
       {
         "category": "self",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-023589.pdf",
-        "summary": "SSA-023589: SMBv1 Vulnerabilities in Advanced Therapy Products - PDF Version"
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-120908.pdf",
+        "summary": "SSA-120908:  Vulnerabilities in Siemens Scalance W-7xx (a/b/g) Product Family - PDF Version"
       }
     ],
     "acknowledgments": []

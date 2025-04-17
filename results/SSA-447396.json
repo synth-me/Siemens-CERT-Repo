@@ -1,0 +1,152 @@
+{
+  "document": {
+    "title": "SSA-447396: Denial-of-Service inSCALANCE X-300, SCALANCE",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-447396",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.1",
+          "date": "2018-09-11T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2018-09-11T00:00:00Z",
+      "current_release_date": "2020-02-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "A vulnerability has been identiﬁed in the integrated web server of SCALANCE X300, SCALANCE X408,\nand SCALANCE X414. The vulnerability could allow an attacker with network access to the device to\ncause a Denial-of-Service condition.\nThe vulnerability can be triggered with publicly available tools, including vulnerability scanners.\nSiemens provides updates for SCALANCE X300, and SCALANCE X408, and provides mitigations for the\nSCALANCE X414."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•Protect network access to the integrated web server on port 443/tcp with appropriate mechanisms:\nRestrict network access to port 443/tcp to trusted IP addresses, and avoid running vulnerability\nscanning tools from trusted IP addresses on affected devices."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity\nSSA-447396 © Siemens 2020 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-447396.pdf",
+        "summary": "SSA-447396: Denial-of-Service inSCALANCE X-300, SCALANCE - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Artem Zinenko from Kaspersky for pointing out that SIPLUS should also be mentioned",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "NET variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V4.0.0Update to V4.1.2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "NET variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2018-13807",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The web interface on port 443/tcp could allow an attacker to cause a Denial-of-Service condition by\nsending specially crafted packets to the web server. The device will automatically reboot, impacting\nnetwork availability for other devices.\nAn attacker must have network access to port 443/tcp to exploit the vulnerability. Neither valid\ncredentials nor interaction by a legitimate user is required to exploit the vulnerability. There is no\nconﬁdentiality or integrity impact, only availability is temporarily impacted.\nThis vulnerability could be triggered by publicly available tools."
+        }
+      ],
+      "cve": "CVE-2018-13807",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H/E:F/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/us/en/\nview/109753720\nSCALANCE X408:\nAll versions < V4.0.0Update to V4.1.2\nhttps://support.industry.siemens.com/cs/us/en/\nview/109753720\nSCALANCE X414:\nAll versionsSee recommendations from section Workarounds\nand Mitigations",
+        "url": "https://support.industry.siemens.com/cs/us/en/"
+      },
+      "references": []
+    }
+  ]
+}

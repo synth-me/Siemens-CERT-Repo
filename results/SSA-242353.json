@@ -1,0 +1,143 @@
+{
+  "document": {
+    "title": "SSA-242353: Access Control Vulnerability inSINAMICS PERFECT",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-242353",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-01-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2020-01-14T00:00:00Z",
+      "current_release_date": "2020-01-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "A race condition in the restart behaviour of SINAMICS PERFECT HARMONY GH180 could allow an\nunauthorized attacker with physical access to the affected device to restart the HMI with disabled security\ncontrols, which could be used to launch further attacks against the affected device.\nSiemens recommends customers to apply a conﬁguration change on affected devices to resolve the\nissue. Detailed instructions are available through customer support."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has not identiﬁed any speciﬁc mitigations or workarounds."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity\nSSA-242353 © Siemens 2020 Page 1 of 2\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-242353.pdf",
+        "summary": "SSA-242353: Access Control Vulnerability inSINAMICS PERFECT - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "With option A30 (HMIs 12 inches or larger)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsApply the conﬁguration changes as provided",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "With option A30 (HMIs 12 inches or larger)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-19278",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected device contains a vulnerability that could allow an unauthenticated attacker to restore the\naffected device to a point where predeﬁned application and operating system protection mechanisms\nare not in place.\nSuccessful exploitation requires physical access to the system, but no system privileges and no\nuser interaction. An attacker could use the vulnerability to compromise conﬁdentialiy, integrity and\navailability of the device.\nAt the time of advisory publication no public exploitation of this security vulnerability was known."
+        }
+      ],
+      "cve": "CVE-2019-19278",
+      "cwe": {
+        "id": "CWE-693",
+        "name": "Protection Mechanism Failure"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "through customer support.\nSINAMICS PERFECT HARMONY GH180 Drives\nMLFB 6SR325.-. . . ..-. . . . (High Availability):\nAll versionsApply the conﬁguration changes as provided\nthrough customer support.",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}
