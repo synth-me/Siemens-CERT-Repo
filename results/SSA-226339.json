@@ -1,0 +1,236 @@
+{
+  "document": {
+    "title": "SSA-226339: Multiple Web Application Vulnerabilities inDesigo",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-226339",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-10-13T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2020-10-13T00:00:00Z",
+      "current_release_date": "2020-10-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The latest hotﬁx for Desigo Insight ﬁxes three vulnerabilities that have been identiﬁed in the web server,\nincluding SQL injection (CVE-2020-15792), clickjacking (CVE-2020-15793), and full path disclosure\n(CVE-2020-15794).\nSiemens recommends updating to the latest version of Desigo Insight and to apply the hotﬁx."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•Disable Desigo Insight Web, if not used. Alternatively, restrict the access to allow only authorized\nusers to access the web application\n•CVE-2020-15793: Only access links from trusted sources in the browser you use to access Desigo\nInsight Web"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected\nproducts with appropriate mechanisms. It is advised to follow recommended security practices in order to\nrun the devices in a protected IT environment."
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-226339.pdf",
+        "summary": "SSA-226339: Multiple Web Application Vulnerabilities inDesigo - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Davide De Rubeis, Damiano Proietti, Matteo Brutti, Stefano Scipioni, and Massimiliano Brolli from\nTIM Security Red Team Research for coordinated disclosure",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Desigo Insight",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsUpdate to V6.0 SP5 and apply Hotﬁx 2 or later",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Desigo Insight"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-15792",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The web service does not properly apply input validation for some query parameters in a reserved\narea.\nThis could allow an authenticated attacker to retrieve data via a content-based blind SQL injection\nattack."
+        }
+      ],
+      "cve": "CVE-2020-15792",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109781922",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-15793",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The device does not properly set the X-Frame-Options HTTP Header which makes it vulnerable to\nClickjacking attacks.\nThis could allow an unauthenticated attacker to retrieve or modify data in the context of a legitimate\nuser by tricking that user to click on a website controlled by the attacker."
+        }
+      ],
+      "cve": "CVE-2020-15793",
+      "cwe": {
+        "id": "CWE-1021",
+        "name": "Improper Restriction of Rendered UI Layers or"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109781922",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-15794",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Some error messages in the web application show the absolute path to the requested resource.\nThis could allow an authenticated attacker to retrieve additional information about the host system."
+        }
+      ],
+      "cve": "CVE-2020-15794",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "https://support.industry.siemens.com/cs/ww/en/\nview/109781922",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}

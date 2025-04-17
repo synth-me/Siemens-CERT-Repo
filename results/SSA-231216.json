@@ -1,0 +1,320 @@
+{
+  "document": {
+    "title": "SSA-231216: Luxion KeyShot Vulnerabilities inSolid Edge",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-231216",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-03-09T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-03-09T00:00:00Z",
+      "current_release_date": "2021-03-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The Solid Edge installation package includes a speciﬁc version of the third-party product KeyShot from\nLuxion, which may not contain the latest security ﬁxes provided by Luxion.\nSiemens recommends to update KeyShot according to the information in the Luxion Security Advisory\nLSA-192169."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has not identiﬁed any speciﬁc mitigations or workarounds. Please follow General Security\nRecommendations."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For more details regarding the vulnerabilities in Luxion KeyShot before V10.1, refer to:\n• Luxion Security Advisory LSA-192169\nFor further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-231216.pdf",
+        "summary": "SSA-231216: Luxion KeyShot Vulnerabilities inSolid Edge - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Luxion for coordination efforts",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Solid Edge SE2020",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsUpdate KeyShot V8 (as bundled with SE2020) to",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Solid Edge SE2020"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-22643",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Importing of malicious 3DS ﬁle would cause out-of-bounds read and crash KeyShot’s 3DS importer\nluxion_geometry_3ds.exe. It may allow an attacker to execute arbitrary code. (ZDI-CAN-11938,\nZDI-CAN-11939)"
+        }
+      ],
+      "cve": "CVE-2021-22643",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "V10.1 or later version\nhttps://www.keyshot.com/resources/downloads/\nSolid Edge SE2021:\nAll versionsUpdate KeyShot V9 (as bundled with SE2021) to\nV10.1 or later version\nhttps://www.keyshot.com/resources/downloads/",
+        "url": "https://www.keyshot.com/resources/downloads/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2021-22645",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "KeyShot project ﬁles (.bip) were prone to malicious load instructions when KeyShot opened such a ﬁle.\nSuch instructions were able to load a DLL through a remote network share, and run its entry point\nfunction. (ZDI-CAN-11940)"
+        }
+      ],
+      "cve": "CVE-2021-22645",
+      "cwe": {
+        "id": "CWE-357",
+        "name": "Insufﬁcient UI Warning of Dangerous Operations"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "V10.1 or later version\nhttps://www.keyshot.com/resources/downloads/\nSolid Edge SE2021:\nAll versionsUpdate KeyShot V9 (as bundled with SE2021) to\nV10.1 or later version\nhttps://www.keyshot.com/resources/downloads/",
+        "url": "https://www.keyshot.com/resources/downloads/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2021-22647",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Importing of malicious 3DS and FBX ﬁle would cause out-of-bounds write and crash KeyShot’s 3DS\nor FBX importer luxion_geometry_3ds.exe. It may allow an attacker to execute arbitrary code. (ZDI-\nCAN-11941, ZDI-CAN-11944, ZDI-CAN-11946, ZDI-CAN-11984)."
+        }
+      ],
+      "cve": "CVE-2021-22647",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "V10.1 or later version\nhttps://www.keyshot.com/resources/downloads/\nSolid Edge SE2021:\nAll versionsUpdate KeyShot V9 (as bundled with SE2021) to\nV10.1 or later version\nhttps://www.keyshot.com/resources/downloads/",
+        "url": "https://www.keyshot.com/resources/downloads/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2021-22649",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Importing of malicious 3DS and JT ﬁle would cause untrusted pointer dereference and crash KeyShot’s\nDatakit importer luxion_geometry_3ds.exe. It may allow an attacker to execute arbitrary code. (ZDI-\nCAN-11942, ZDI-CAN-12064)"
+        }
+      ],
+      "cve": "CVE-2021-22649",
+      "cwe": {
+        "id": "CWE-822",
+        "name": "Untrusted Pointer Dereference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "V10.1 or later version\nhttps://www.keyshot.com/resources/downloads/\nSolid Edge SE2021:\nAll versionsUpdate KeyShot V9 (as bundled with SE2021) to\nV10.1 or later version\nhttps://www.keyshot.com/resources/downloads/",
+        "url": "https://www.keyshot.com/resources/downloads/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2021-22651",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Importing of malicious Creo ﬁles (ZIP archives with extensions: edz, pyc, or c3di) would cause path\ntraversal: extracting ﬁles that would end up outside of the destination directory hierarchy. Files placed\nin such a fashion could be able to run as scripts during system startup. (ZDI-CAN-11983)"
+        }
+      ],
+      "cve": "CVE-2021-22651",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "V10.1 or later version\nhttps://www.keyshot.com/resources/downloads/\nSolid Edge SE2021:\nAll versionsUpdate KeyShot V9 (as bundled with SE2021) to\nV10.1 or later version\nhttps://www.keyshot.com/resources/downloads/",
+        "url": "https://www.keyshot.com/resources/downloads/"
+      },
+      "references": []
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "document": {
+    "title": "SSA-284342:  Vulnerabilities in Automation License Manager (ALM)",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-284342",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "",
+          "date": "",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "",
+      "current_release_date": "",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The latest update of Automation License Manager (ALM) fixes three vulnerabilities. One of\nthe vulnerabilities could allow a remote attacker to obtain write access to the hard disk.\nAFFECTED PRODUCTS\nAutomation License Manager (ALM): All versions < V5.3 SP3 Update 1\nDESCRIPTION\nThe Automation License Manager (ALM) centrally manages license keys for various Siemens\nsoftware products. Software products requiring license keys automatically report this\nrequirement to the ALM. When the ALM finds a valid license key for this software, the\nsoftware can be used in conformity with the end user license agreement.\nDetailed information about the vulnerabilities is provided below."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": ""
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-284342.pdf",
+        "summary": "SSA-284342:  Vulnerabilities in Automation License Manager (ALM) - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": []
+      }
+    ]
+  },
+  "vulnerabilities": []
+}
