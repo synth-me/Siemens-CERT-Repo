@@ -1,0 +1,85 @@
+{
+  "document": {
+    "title": "",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "",
+          "date": "",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "",
+      "current_release_date": "",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Security researchers published information on vulnerabilities known as Spectre, Meltdown,\nSpectre-NG, Lazy FP State Restore, Spectre V1.1, and L1 Terminal Fault/Foreshadow.\nThese vulnerabilities affect many modern processors from different vendors to a varying\ndegree.\nSiemens is analyzing the impact of these vulnerabilities and of the mitigations released on its\nown products . If Siemens products are found to be affected, additional product-specific\nupdate information will be distributed either via the Siemens ProductCERT website [1] or\nthrough Siemens’ customer service organizations if applicable.\nVendors of affected processors, operating systems and other software, e.g. Internet\nBrowsers, are assessing the vulnerabilities and are releasing updates which help to mitigate\nthese vulnerabilities.\nSeveral Siemens products can be installed on systems that include affected processors and\nuse operating systems which provide mitigating patches. This document provides:\n· General guidance for customers who are responsible for managing systems that run\nSiemens products;\n· Information on the vulnerabilities;\n· General recommendations for applying related operating system patches, microcode\nupdates and 3rd party software updates.\nVULNERABILITY DETAILS\nSpectre, Meltdown, Spectre-NG, Lazy FP State Restore, Spectre V1.1, and L1 Terminal\nFault/Foreshadow are vulnerabilities from a class of vulnerabilities referred to as “speculative\nexecution side-channel attacks”. The impact of these vulnerabilities is that an attacker could\nobtain content from memory regions that should not be accessible.\nA pre-requisite to exploitation of these vulnerabilities is that an attacker must be able to\nexecute untrusted code on a system with an affected processor without applied mitigations.\nThe class of vulnerabilities referred to as “speculative execution side-channel attacks”\ncomprises the following disclosed vulnerabilities:\nSpectre (Vulnerability disclosures from 2018-01-04):\n· Spectre Variant 1 was assigned CVE-2017-5753 and is claimed to affect most\nprocessor vendors\n· Spectre Variant 2 was assigned CVE-2017-5715 and is claimed to affect most\nprocessor vendors.\nMeltdown (Vulnerability disclosures from 2018-01-04):\n· Meltdown was assigned CVE-2017-5754 and is known to affect processors from\nARM, IBM, and Intel.\nSiemens Security Bulletin by Siemens ProductCERT\nSSB-068644 © Siemens AG 2018 Page 2 of 4Spectre-NG (Vulnerability disclosures from 2018-05-21):\n· Spectre Variant 3a was assigned CVE-2018-3640 and is known to affect\nprocessors from ARM and Intel.\n· Spectre Variant 4 was assigned CVE-2018-3639 and is claimed to affect most\nprocessor vendors.\nLazy FP State Restore (Vulnerability disclosure from 2018-06-13):\n· Lazy FP State Restore was assigned CVE-2018-3665 and is known to affect\nprocessors from Intel.\nSpectre V1.1 (Vulnerability disclosure from 2018-07-10):\n· Spectre Variant 1.1 was assigned CVE-2018-3693 and is claimed to affect most\nprocessor vendors.\nL1 Terminal Fault / Foreshadow (Vulnerability disclosure from 2018-08-14)\n· L1 Terminal Fault: SGX was assigned CVE-2018-3615 and is known to affect most\nprocessors from Intel.\n· L1 Terminal Fault: OS/SSM was assigned CVE-2018-3620 and is known to affect\nmost processors from Intel.\n· L1 Terminal Fault: VMM was assigned CVE-2018-3646 and is known to affect most\nprocessors from Intel.\nDetailed information on these vulnerabilities has been published by the researchers [2, 3, 4,\n5, 6, 7], as well as by vendors of operating systems and processors, such as Microsoft [13,\n14, 15, 16, 17, 18] or Intel [8, 9, 10, 11, 12].\nRECOMMENDATIONS\nVendors of processors, operating systems, and other applications are releasing updates that\nhelp to mitigate these vulnerabilities. Siemens is analyzing the impact of these vulnerabilities\non its own products. If Siemens products are found to be affected, additional product-specific\nupdate information will be distributed either via the Siemens ProductCERT website [1] or\nthrough Siemens’ customer service organizations if applicable.\nUpdates for operating systems, processor firmware, and other systems can help to mitigate\nthese vulnerabilities. Siemens is testing the compatibility of the patches released for\nsupported operating systems for several products.\nSiemens is aware that some updates can result in compatibility, performance or stability\nissues on certain products and operating systems. Operating system vendors, such as\nMicrosoft, are still working to address these compatibility issues with their updates. Siemens\nwill therefore continue to evaluate the applicability of those updates.\nSiemens recommends consulting the product support documentation via the usual\ninformation channels, or to contact Siemens’ customer service for information on compatibility\nbefore applying the updates.\nAs a general guidance, Siemens recommends that customers evaluate the following:\n· Determine if vendors of the processors, operating systems and other software used\non the computer systems have released mitigations for these vulnerabilities.\n· As a pre-requisite for an attack, an attacker must be able to run untrusted code on\naffected systems. Therefore, Siemens recommends determining if it is possible that\nuntrusted code can be run on these systems, or if existing measures implemented by\nthe operator reduce the likelihood of untrusted code being run.\nSiemens Security Bulletin by Siemens ProductCERT\nSSB-068644 © Siemens AG 2018 Page 3 of 4· Applying a Defense-in-Depth concept [20] can help to reduce the probability that\nuntrusted code is run on the system. Siemens recommends applying the Defense-in-\nDepth concept.\n· Consult Siemens’ product support documentation, or contact Siemens’ customer\nservice to determine if information on the compatibility of the updates provided by the\nvendors is available before applying the updates.\nIt is advised to configure the environment according to Siemens’ operational guidelines [19] in\norder to run the devices in a protected IT environment.\nADDITIONAL RESOURCES\n[1] Siemens ProductCERT website:\nhttps://www.siemens.com/cert/advisories\n[2] Information from Google Project Zero:\nhttps://googleprojectzero.blogspot.de/2018/01/reading-privileged-memory-with-\nside.html\n[3] Information from researchers at TU Graz:\nhttps://spectreattack.com/\n[4] Information from Google Project Zero:\nhttps://bugs.chromium.org/p/project-zero/issues/detail?id=1528\n[5] Information from Cyberus Technology:\nhttp://blog.cyberus-technology.de/posts/2018-06-06-intel-lazyfp-vulnerability.html\n[6] Information from researchers at MIT and Carl Waldspurger Consulting:\nhttps://arxiv.org/pdf/1807.03757.pdf\n[7] Information from researchers regarding Foreshadow:\nhttps://foreshadowattack.eu/\n[8] Intel Security Advisory INTEL-SA-00088:\nhttps://security-center.intel.com/advisory.aspx?intelid=INTEL-SA-\n00088&languageid=en-fr\n[9] Intel Security Advisory INTEL-SA-00115:\nhttps://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00115.html\n[10] Intel Security Advisory INTEL-SA-00145:\nhttps://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00145.html\n[11] Intel Security Advisory INTEL-OSS-10002:\nhttps://01.org/security/advisories/intel-oss-10002\n[12] Intel Security Advisory INTEL-SA-00161:\nhttps://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00161.html\n[13] Information from Microsoft:\nhttps://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV180002\n[14] Information from Microsoft on Spectre Variant 3a:\nhttps://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV180013\n[15] Information from Microsoft on Spectre Variant 4:\nhttps://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180012\n[16] Information from Microsoft on Lazy FP State Restore:\nhttps://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180016\n[17] Information from Microsoft on Spectre V1.1 (see Q23):\nhttps://support.microsoft.com/en-ph/help/4072698/windows-server-guidance-to-\nprotect-against-the-speculative-execution\n[18] Information from Microsoft on L1 Terminal Fault / Foreshadow:\nhttps://portal.msrc.microsoft.com/en-us/security-guidance/advisory/adv180018\nSiemens Security Bulletin by Siemens ProductCERT\nSSB-068644 © Siemens AG 2018 Page 4 of 4[19] An overview of the operational guidelines for Industrial Security (with the cell\nprotection concept):\nhttps://www.siemens.com/cert/operational-guidelines-industrial-security\n[20] Information about Industrial Security by Siemens:\nhttps://www.siemens.com/industrialsecurity\n[21] For further inquiries on vulnerabilities in Siemens products and solutions, please\ncontact the Siemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": ""
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/.pdf",
+        "summary": " - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": []
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

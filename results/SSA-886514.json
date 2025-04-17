@@ -1,0 +1,194 @@
+{
+  "document": {
+    "title": "SSA-886514: Persistent XSS Vulnerabilities intheWeb Interface of",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-886514",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.1",
+          "date": "2020-04-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2020-04-14T00:00:00Z",
+      "current_release_date": "2021-02-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The Climatix BACnet/IP (POL908) and AWM (POL909) modules contain two persistent cross-site scripting\n(XSS) vulnerabilities in the web interface that could allow a remote attacker to execute arbitrary JavaScript\ncode in the context of other users’ web sessions.\nSiemens has released an update for Climatix POL909 and recommends to update to the latest version.\nSiemens recommends speciﬁc countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•Update Climatix POL908 and POL909 to V11.22 or later version. These versions disable the web\ninterface by default, as it is no longer needed in standard use cases.\n•Climatix POL908 is designed to be operated in protected BACnet/IP networks only. Do not connect\nit to other networks, such as an Ofﬁce LAN or the Internet. Also consider to remove POL908,\nin case the integrated BACnet/IP implementation in newer versions of Climatix 600 controllers is\nalready sufﬁcient for your environment.\nThe remaining mitigation measures apply only, if the web interface is activated (e.g. via the Climatix\nSCOPE tool):\n•Climatix POL909: When conﬁguring your custom web application, disable the access to the default\nweb pages provided by POL909\n•Enforce authentication for the web interface, and change the default password of the standard\nADMIN user\n• Disable JavaScript within the web browser used to access the web server of Climatix POL908\n• Utilize a modern web browser with integrated XSS ﬁltering mechanisms"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected\nproducts with appropriate mechanisms. It is advised to follow recommended security practices in order to\nSSA-886514 © Siemens 2021 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT\nrun the devices in a protected IT environment."
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-886514.pdf",
+        "summary": "SSA-886514: Persistent XSS Vulnerabilities intheWeb Interface of - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Ezequiel Fernandez from Dreamlab Technologies for reporting the vulnerabilities\nSSA-886514 © Siemens 2021 Page 2 of 3\nSiemens Security Advisory by Siemens ProductCERT",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Climatix POL908 (BACnet/IP module)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsSee recommendations from section Workarounds",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Climatix POL908 (BACnet/IP module)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-7574",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A persistent cross-site scripting (XSS) vulnerability exists in the “Server Conﬁg” web interface of the\naffected devices that could allow an attacker to inject arbitrary JavaScript code. The code could be\npotentially executed later by another (possibly privileged) user.\nThe security vulnerability could be exploited by an attacker with network access to the affected system.\nSuccessful exploitation requires no system privileges. An attacker could use the vulnerability to\ncompromise the conﬁdentiality and integrity of other users’ web session."
+        }
+      ],
+      "cve": "CVE-2020-7574",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "and Mitigations\nClimatix POL909 (AWM module):\nAll versions < V11.32Update to V11.32\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109747351 (login required)",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2020-7575",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A persistent cross-site scripting (XSS) vulnerability exists in the web server access log page of the\naffected devices that could allow an attacker to inject arbitrary JavaScript code via specially crafted\nGET requests. The code could be potentially executed later by another (privileged) user.\nThe security vulnerability could be exploited by an attacker with network access to the affected system.\nSuccessful exploitation requires no system privileges. An attacker could use the vulnerability to\ncompromise the conﬁdentiality and integrity of other users’ web sessions."
+        }
+      ],
+      "cve": "CVE-2020-7575",
+      "cwe": {
+        "id": "CWE-80",
+        "name": "Improper Neutralization of Script-Related HTML Tags"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N/E:P/RL:T/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "and Mitigations\nClimatix POL909 (AWM module):\nAll versions < V11.32Update to V11.32\nhttps://support.industry.siemens.com/cs/ww/en/\nview/109747351 (login required)",
+        "url": "https://support.industry.siemens.com/cs/ww/en/"
+      },
+      "references": []
+    }
+  ]
+}

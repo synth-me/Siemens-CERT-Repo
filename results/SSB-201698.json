@@ -1,0 +1,85 @@
+{
+  "document": {
+    "title": "",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2024-03-26T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2024-03-26T00:00:00Z",
+      "current_release_date": "2024-03-26T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The Discovery and Basic Configuration Protocol (DCP) is a protocol which is widely used in the industrial\ncontext. In the specification of the protocol several functions are described which are intended to be used\nfor special operational cases like initial setup or reset of a component. As DCP was not designed as a\nsecurity protocol, it could be abused by an attacker to affect the availability of affected products. The\nprotocol is also used in PROFINET communication in case no security class configuration is used.\nThis bulletin describes the same behavior that is described in the PROFINET Security Advisory PISA-001\nby the PI Organization.\nDETAILS andANALYSIS\nAffected products are all PROFINET products, that do not comply to the PROFINET Security Class 1 and\nproducts that can be operated in a PROFINET network, or supporting configuration using DCP .\nWhen DCP is activated, attackers could configure the connected components according to the specifica-\ntion. However, attacks are only possible from the local network as DCP is a layer 2 protocol and therefore\nnot routable. An attacker could perform the following actions:\n• Change the IP/DHCP/Name configuration: ‘DCP Set (IP)’ / ‘DCP-Set (NameOfStation)’\n• Reset the device in full operation: ‘DCP-Set (Reset-to-Factory)’\nA successful attack could thus create a denial of service condition by changing the parameters of a\ncomponent.\nMITIGATIONS\nSiemens recommends customers to implement the following mitigations where applicable:\n• Use PROFINET Security class 1 or higher\n•Use DCP in read-only mode or disable the usage of DCP according to their environment and use\ncases\n• Operate the component in a state where DCP is disabled automatically\nWhere it is not possible to deactivate the usage of DCP ensure a strict access policy to your network.\nDetails how to disable the protocol or configure PROFINET Security class could be found in the dedicated\nmanual of your components."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": ""
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to configure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals. Additional information on Industrial Security by\nSiemens can be found at: https://www.siemens.com/industrialsecurity\nSSB-201698 © Siemens 2024 Page 1 of 2\nSiemens Security Bulletin by Siemens ProductCERT"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": ""
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/.pdf",
+        "summary": " - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": []
+      }
+    ]
+  },
+  "vulnerabilities": []
+}

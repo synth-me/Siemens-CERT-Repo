@@ -1,0 +1,143 @@
+{
+  "document": {
+    "title": "SSA-856721: Vulnerability inRUGGEDCOM Discovery Protocol",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-856721",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.2",
+          "date": "2017-09-28T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2017-09-28T00:00:00Z",
+      "current_release_date": "2018-02-22T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The RUGGEDCOM RCDP protocol is not properly conﬁgured after commissioning of RUGGEDCOM\nROS based devices and some SCALANCE X switch models and could allow unauthenticated remote\nusers to perform administrative operations. An attacker must be in the same adjacent network and the\nRCDP daemon must be enabled in order to exploit the vulnerability.\nSiemens has released updates for all affected products and recommends that customers update to the\nnew versions."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n•Manually deactivate RCDP according to the instructions in the user guide. This measures completely\nmitigates the vulnerability.\nSSA-856721 © Siemens AG 2018 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with\nappropriate mechanisms. In order to run the devices in a protected IT environment, Siemens particularly\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on vulnerabilities in Siemens products and solutions, please contact the Siemens\nProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-856721.pdf",
+        "summary": "SSA-856721: Vulnerability inRUGGEDCOM Discovery Protocol - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "RUGGEDCOM ROS for RSL910 devices",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < ROS V5.0.1Install V5.0.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "RUGGEDCOM ROS for RSL910 devices"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2017-12736",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "After initial conﬁguration, the Ruggedcom Discovery Protocol (RCDP) is still able to writeto the device\nunder certain conditions, potentially allowing users located in the adjacentnetwork of the targeted\ndevice to perform unauthorized administrative actions.\nCVSS v3.0 Base Score 8.8\nCVSS Vector CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+        }
+      ],
+      "cve": "CVE-2017-12736",
+      "cwe": {
+        "id": "",
+        "name": ""
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": null
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "The ﬁrmware updates for the Ruggedcom\nROS-based devices can be obtained for free\nby contacting the Siemens support team\nat: https://support.industry.siemens.com/my/us/\nen/requests#createRequest\nRUGGEDCOM ROS for all other devices:\nAll versions < ROS V4.3.4Install V4.3.4\nThe ﬁrmware updates for the Ruggedcom\nROS-based devices can be obtained for free\nby contacting the Siemens support team\nat: https://support.industry.siemens.com/my/us/\nen/requests#createRequest\nSCALANCE XB-200/XC-200/XP-200/XR300-\nWG:\nAll versions between V3.0 (including) and V3.0.2\n(excluding)Install V3.0.2\nhttps://support.industry.siemens.com/cs/de/en/\nview/109754174\nSCALANCE XR-500/XM-400:\nAll versions between V6.1 (including) and V6.1.1\n(excluding)Install V6.1\nhttps://support.industry.siemens.com/cs/ww/de/\nview/109755475",
+        "url": "https://support.industry.siemens.com/my/us/"
+      },
+      "references": []
+    }
+  ]
+}

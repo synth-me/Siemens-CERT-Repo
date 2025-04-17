@@ -1,0 +1,1025 @@
+{
+  "document": {
+    "title": "SSA-927095: UltraVNC Vulnerabilities inSINUMERIK Products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-927095",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-06-09T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2020-06-09T00:00:00Z",
+      "current_release_date": "2020-06-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "UltraVNC (V1.2.2.3 and below) vulnerabilities in the affected products could allow remote code execution,\ninformation disclosure and Denial-of-Service attacks under certain conditions.\nSiemens has released updates for the affected products and recommends that customers update to the\nlatest versions."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Restrict access to the device to the internal or VPN network and to trusted IP addresses only."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "Listed vulnerabilities are part of a Kaspersky report. See VNC vulnerability research for related security\nadvisories and additional information on the vulnerabilites.\nFor further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-927095.pdf",
+        "summary": "SSA-927095: UltraVNC Vulnerabilities inSINUMERIK Products - PDF Version"
+      }
+    ],
+    "acknowledgments": []
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SINUMERIK Access MyMachine /P2P",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions < V4.8Update to V4.8",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SINUMERIK Access MyMachine /P2P"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2018-15361",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1198 has a buffer underﬂow vulnerability in VNC client code, which can potentially\nresult in code execution. This attack appears to be exploitable via network connectivity. This\nvulnerability has been ﬁxed in revision 1199."
+        }
+      ],
+      "cve": "CVE-2018-15361",
+      "cwe": {
+        "id": "CWE-124",
+        "name": "Buffer Underwrite (‘Buffer Underﬂow’)"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8258",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1198 has a heap buffer overﬂow vulnerability in VNC client code which results code\nexecution. This attack appears to be exploitable via network connectivity. This vulnerability has been\nﬁxed in revision 1199."
+        }
+      ],
+      "cve": "CVE-2019-8258",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8259",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1198 contains multiple memory leaks in VNC client code, which allow an attacker to\nread stack memory and can be abused for information disclosure. Combined with another vulnerability,\nit can be used to leak stack memory and bypass ASLR. This attack appears to be exploitable via\nnetwork connectivity. These vulnerabilities have been ﬁxed in revision 1199."
+        }
+      ],
+      "cve": "CVE-2019-8259",
+      "cwe": {
+        "id": "CWE-665",
+        "name": "Improper Initialization"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8260",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1199 has a out-of-bounds read vulnerability in VNC client RRE decoder code,\ncaused by multiplication overﬂow. This attack appears to be exploitable via network connectivity. This\nvulnerability has been ﬁxed in revision 1200."
+        }
+      ],
+      "cve": "CVE-2019-8260",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8261",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1199 has a out-of-bounds read vulnerability in VNC code inside client CoRRE de-\ncoder, caused by multiplication overﬂow. This attack appears to be exploitable via network connectivity.\nThis vulnerability has been ﬁxed in revision 1200."
+        }
+      ],
+      "cve": "CVE-2019-8261",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8262",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1203 has multiple heap buffer overﬂow vulnerabilities in VNC client code inside\nUltra decoder, which results in code execution. This attack appears to be exploitable via network\nconnectivity. These vulnerabilities have been ﬁxed in revision 1204."
+        }
+      ],
+      "cve": "CVE-2019-8262",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8263",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1205 has stack-based buffer overﬂow vulnerability in VNC client code inside\nShowConnInfo routine, which leads to a denial of service (DoS) condition. This attack appear to\nbe exploitable via network connectivity. User interaction is required to trigger this vulnerability. This\nvulnerability has been ﬁxed in revision 1206."
+        }
+      ],
+      "cve": "CVE-2019-8263",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8264",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1203 has out-of-bounds access vulnerability in VNC client inside Ultra2 decoder,\nwhich can potentially result in code execution. This attack appears to be exploitable via network\nconnectivity. This vulnerability has been ﬁxed in revision 1204."
+        }
+      ],
+      "cve": "CVE-2019-8264",
+      "cwe": {
+        "id": "CWE-788",
+        "name": "Access of Memory Location After End of Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8265",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1207 has multiple out-of-bounds access vulnerabilities connected with improper\nusage of SETPIXELS macro in VNC client code, which can potentially result in code execution. This\nattack appears to be exploitable via network connectivity. These vulnerabilities have been ﬁxed in\nrevision 1208."
+        }
+      ],
+      "cve": "CVE-2019-8265",
+      "cwe": {
+        "id": "CWE-788",
+        "name": "Access of Memory Location After End of Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8266",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1207 has multiple out-of-bounds access vulnerabilities connected with improper\nusage of ClientConnection::Copybuffer function in VNC client code, which can potentially result in\ncode execution. This attack appears to be exploitable via network connectivity. User interaction is\nrequired to trigger these vulnerabilities. These vulnerabilities have been ﬁxed in revision 1208."
+        }
+      ],
+      "cve": "CVE-2019-8266",
+      "cwe": {
+        "id": "CWE-788",
+        "name": "Access of Memory Location After End of Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8267",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1207 has out-of-bounds read vulnerability in VNC client code inside TextChat\nmodule, which results in a denial of service (DoS) condition. This attack appears to be exploitable via\nnetwork connectivity. This vulnerability has been ﬁxed in revision 1208."
+        }
+      ],
+      "cve": "CVE-2019-8267",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8268",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1206 has multiple off-by-one vulnerabilities in VNC client code connected with\nimproper usage of ClientConnection::ReadString function, which can potentially result code execution.\nThis attack appears to be exploitable via network connectivity. These vulnerabilities have been ﬁxed in\nrevision 1207."
+        }
+      ],
+      "cve": "CVE-2019-8268",
+      "cwe": {
+        "id": "CWE-193",
+        "name": "Off-by-one Error"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8269",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1206 has stack-based Buffer overﬂow vulnerability in VNC client code inside\nFileTransfer module, which leads to a denial of service (DoS) condition. This attack appear to be\nexploitable via network connectivity. This vulnerability has been ﬁxed in revision 1207."
+        }
+      ],
+      "cve": "CVE-2019-8269",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8270",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1210 has out-of-bounds read vulnerability in VNC client code inside Ultra decoder,\nwhich results in a denial of service (DoS) condition. This attack appear to be exploitable via network\nconnectivity. This vulnerability has been ﬁxed in revision 1211."
+        }
+      ],
+      "cve": "CVE-2019-8270",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8271",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1211 has a heap buffer overﬂow vulnerability in VNC server code inside ﬁle transfer\nhandler, which can potentially result code execution. This attack appears to be exploitable via network\nconnectivity. This vulnerability has been ﬁxed in revision 1212."
+        }
+      ],
+      "cve": "CVE-2019-8271",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8272",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1211 has multiple off-by-one vulnerabilities in VNC server code, which can potentially\nresult in code execution. This attack appears to be exploitable via network connectivity. These\nvulnerabilities have been ﬁxed in revision 1212."
+        }
+      ],
+      "cve": "CVE-2019-8272",
+      "cwe": {
+        "id": "CWE-193",
+        "name": "Off-by-one Error"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8273",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1211 has a heap buffer overﬂow vulnerability in VNC server code inside ﬁle transfer\nrequest handler, which can potentially result in code execution. This attack appears to be exploitable\nvia network connectivity. This vulnerability has been ﬁxed in revision 1212."
+        }
+      ],
+      "cve": "CVE-2019-8273",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8274",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1211 has a heap buffer overﬂow vulnerability in VNC server code inside ﬁle transfer\noffer handler, which can potentially in result code execution. This attack appears to be exploitable via\nnetwork connectivity. This vulnerability has been ﬁxed in revision 1212."
+        }
+      ],
+      "cve": "CVE-2019-8274",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8275",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1211 has multiple improper null termination vulnerabilities in VNC server code, which\nresult in out-of-bound data being accessed by remote users. This attack appears to be exploitable via\nnetwork connectivity. These vulnerabilities have been ﬁxed in revision 1212."
+        }
+      ],
+      "cve": "CVE-2019-8275",
+      "cwe": {
+        "id": "CWE-170",
+        "name": "Improper Null Termination"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8276",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1211 has a stack buffer overﬂow vulnerability in VNC server code inside ﬁle transfer\nrequest handler, which can result in Denial of Service (DoS). This attack appears to be exploitable via\nnetwork connectivity. This vulnerability has been ﬁxed in revision 1212."
+        }
+      ],
+      "cve": "CVE-2019-8276",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overﬂow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8277",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1211 contains multiple memory leaks in VNC server code, which allows an attacker\nto read stack memory and can be abused for information disclosure. Combined with another vulnera-\nbility, it can be used to leak stack memory and bypass ASLR. This attack appears to be exploitable via\nnetwork connectivity. These vulnerabilities have been ﬁxed in revision 1212."
+        }
+      ],
+      "cve": "CVE-2019-8277",
+      "cwe": {
+        "id": "CWE-665",
+        "name": "Improper Initialization"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    },
+    {
+      "title": "CVE-2019-8280",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "UltraVNC revision 1203 has out-of-bounds access vulnerability in VNC client inside RAW decoder,\nwhich can potentially result code execution. This attack appear to be exploitable via network connec-\ntivity. This vulnerability has been ﬁxed in revision 1204."
+        }
+      ],
+      "cve": "CVE-2019-8280",
+      "cwe": {
+        "id": "CWE-788",
+        "name": "Access of Memory Location After End of Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "SINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win10 software /IPC:\nAll versions < V14.00Update to V14.00\nSINUMERIK software can be obtained from your\nlocal Siemens account manager\nSINUMERIK PCU base Win7 software /IPC:\nAll versions < V12.01 HF4Update to V12.01 HF4\nSINUMERIK software can be obtained from your\nlocal Siemens account manager",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}
