@@ -1,0 +1,164 @@
+{
+  "document": {
+    "title": "SSA-381684: Improper Password Protection during Authentication in",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-381684",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.3",
+          "date": "2020-09-08T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2020-09-08T00:00:00Z",
+      "current_release_date": "2020-12-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Custom Script",
+          "version": "1.0"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "A vulnerability has been identiﬁed in SIMATIC S7-300 and S7-400 CPU families and derived products,\nwhich could result in credential disclosure.\nSiemens recommends countermeasures as there are currently no ﬁxes available."
+      },
+      {
+        "title": "Workarounds",
+        "category": "mitigation",
+        "text": "Siemens has identiﬁed the following speciﬁc workarounds and mitigations that customers can apply to\nreduce the risk:\n• Apply Defense-in-Depth concept: https://www.siemens.com/industrialsecurity\n•Apply cell protection concept: https://www.siemens.com/cert/operational-guidelines-industrial-\nsecurity\n•For SIMATIC S7-CPU 410 CPUs: Activate Field Interface Security in PCS 7 V9.0, and use a\nCP443-1 Adv. to communicate with ES/OS"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices\nwith appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens\nrecommends to conﬁgure the environment according to Siemens’ operational guidelines for Industrial\nSecurity (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to\nfollow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/\nindustrialsecurity\nSSA-381684 © Siemens 2020 Page 1 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Additional Information",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the\nSiemens ProductCERT:\nhttps://www.siemens.com/cert/advisories\nSSA-381684 © Siemens 2020 Page 2 of 3\nSiemens Security Advisory by Siemens ProductCERT"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": ""
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-381684.pdf",
+        "summary": "SSA-381684: Improper Password Protection during Authentication in - PDF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Siemens thanks the following parties for their efforts:",
+        "summary": ""
+      },
+      {
+        "organization": "Hyunguk Y oo from University of New Orleans for reporting the vulnerability",
+        "summary": ""
+      },
+      {
+        "organization": "Irfan Ahmed and Adeen Ayub from Virginia Commonwealth University for reporting the vulnerability",
+        "summary": ""
+      },
+      {
+        "organization": "Jongwon Choi from NSR (National Security Research Institute) for reporting the vulnerability",
+        "summary": ""
+      },
+      {
+        "organization": "Taeshik Shon from Ajou University for reporting the vulnerability",
+        "summary": ""
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "CPUs and SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versionsSee recommendations from section Workarounds",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "CPUs and SIPLUS variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-15791",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The authentication protocol between a client and a PLC via port 102/tcp (ISO-TSAP) insufﬁciently\nprotects the transmitted password. This could allow an attacker that is able to intercept the network\ntrafﬁc to obtain valid PLC credentials."
+        }
+      ],
+      "cve": "CVE-2020-15791",
+      "cwe": {
+        "id": "CWE-522",
+        "name": "Insufﬁciently Protected Credentials"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": null,
+            "baseSeverity": "UNKNOWN",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:U/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": {
+        "product_ids": [
+          "1"
+        ],
+        "category": "vendor_fix",
+        "details": "and Mitigations\nSIMATIC S7-400 CPU family (incl. SIPLUS vari-\nants):\nAll versionsSee recommendations from section Workarounds\nand Mitigations\nSIMATIC WinAC RTX (F) 2010:\nAll versionsSee recommendations from section Workarounds\nand Mitigations\nSINUMERIK 840D sl:\nAll versionsSee recommendations from section Workarounds\nand Mitigations",
+        "url": ""
+      },
+      "references": []
+    }
+  ]
+}
